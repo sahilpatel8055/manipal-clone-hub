@@ -13,6 +13,15 @@ import { Clock, Users, Calendar, Award, BookOpen, TrendingUp, DollarSign, Briefc
 import smuLogo from '@/assets/smulogo.jpg';
 
 const MBA_SMU = () => {
+  const specializations = [
+    { icon: TrendingUp, title: 'Marketing Management' },
+    { icon: DollarSign, title: 'Financial Management' },
+    { icon: Users, title: 'Human Resource Management' },
+    { icon: Briefcase, title: 'Operations Management' },
+    { icon: BookOpen, title: 'Information Technology Management' },
+    { icon: Award, title: 'International Business' },
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       <Header />

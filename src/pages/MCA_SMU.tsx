@@ -13,6 +13,15 @@ import { Clock, Users, Calendar, Award, BookOpen, TrendingUp, DollarSign, Briefc
 import smuLogo from '@/assets/smulogo.jpg';
 
 const MCA_SMU = () => {
+  const specializations = [
+    { icon: Code, title: 'Software Engineering' },
+    { icon: Database, title: 'Data Science' },
+    { icon: TrendingUp, title: 'Digital Marketing' },
+    { icon: Briefcase, title: 'Project Management' },
+    { icon: BookOpen, title: 'Artificial Intelligence' },
+    { icon: Award, title: 'Cybersecurity' },
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       <Header />

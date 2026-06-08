@@ -13,6 +13,15 @@ import { Clock, Users, Calendar, Award, BookOpen, TrendingUp, DollarSign, Briefc
 import smuLogo from '@/assets/smulogo.jpg';
 
 const BA_SMU = () => {
+  const specializations = [
+    { icon: Globe, title: 'English' },
+    { icon: FileText, title: 'Sociology' },
+    { icon: TrendingUp, title: 'Economics' },
+    { icon: Users, title: 'Psychology' },
+    { icon: BookOpen, title: 'Political Science' },
+    { icon: Award, title: 'History' },
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       <Header />

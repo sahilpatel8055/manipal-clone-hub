@@ -13,6 +13,15 @@ import { Clock, Users, Calendar, Award, BookOpen, TrendingUp, DollarSign, Briefc
 import smuLogo from '@/assets/smulogo.jpg';
 
 const BCOM_SMU = () => {
+  const specializations = [
+    { icon: Calculator, title: 'Accounting & Finance' },
+    { icon: BarChart, title: 'Banking & Insurance' },
+    { icon: TrendingUp, title: 'Marketing Management' },
+    { icon: DollarSign, title: 'Financial Markets' },
+    { icon: Briefcase, title: 'Business Management' },
+    { icon: Award, title: 'International Business' },
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
