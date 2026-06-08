@@ -28,7 +28,7 @@ const MCA_SMU = () => {
       
       <main>
         {/* Hero Section */}
-        <section className="relative py-20 bg-gradient-to-br from-green-50 to-emerald-100 dark:from-green-900/20 dark:to-emerald-800/20">
+        <section className="relative pt-32 md:pt-36 pb-16 bg-gradient-to-br from-green-50 to-emerald-100 dark:from-green-900/20 dark:to-emerald-800/20">
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-8">
@@ -101,7 +101,7 @@ const MCA_SMU = () => {
         </section>
 
         {/* Specializations Section */}
-        <section className="py-20">
+        <section className="py-12 md:py-16">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
