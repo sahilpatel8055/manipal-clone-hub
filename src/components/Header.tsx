@@ -160,8 +160,6 @@ const Header = () => {
           )}
         </div>
       </header>
-      {/* Spacer so page content doesn't hide under the fixed header */}
-      <div aria-hidden className="h-24 md:h-28" />
     </>
   );
 };
