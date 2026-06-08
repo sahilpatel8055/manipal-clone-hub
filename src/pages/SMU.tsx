@@ -183,51 +183,33 @@ const SMU = () => {
       </section>
 
       {/* Available Programs */}
-      <section className="py-16 bg-muted/30">
+      <section className="py-12 md:py-16 bg-muted/30">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-foreground mb-12">
+          <h2 className="text-3xl font-bold text-center text-foreground mb-10">
             Distance Learning Programs
           </h2>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <Card className="p-6 hover:shadow-lg transition-all duration-300">
-              <h3 className="text-xl font-semibold mb-2">Master of Business Administration (MBA)</h3>
-              <p className="text-muted-foreground mb-4">2 Years | Management Excellence</p>
-              <Button className="w-full">Explore MBA</Button>
-            </Card>
-            
-            <Card className="p-6 hover:shadow-lg transition-all duration-300">
-              <h3 className="text-xl font-semibold mb-2">Master of Computer Applications (MCA)</h3>
-              <p className="text-muted-foreground mb-4">2 Years | IT Leadership</p>
-              <Button className="w-full">Explore MCA</Button>
-            </Card>
-            
-            <Card className="p-6 hover:shadow-lg transition-all duration-300">
-              <h3 className="text-xl font-semibold mb-2">Bachelor of Business Administration (BBA)</h3>
-              <p className="text-muted-foreground mb-4">3 Years | Business Skills</p>
-              <Button className="w-full">Explore BBA</Button>
-            </Card>
-            
-            <Card className="p-6 hover:shadow-lg transition-all duration-300">
-              <h3 className="text-xl font-semibold mb-2">Bachelor of Computer Applications (BCA)</h3>
-              <p className="text-muted-foreground mb-4">3 Years | Tech Foundation</p>
-              <Button className="w-full">Explore BCA</Button>
-            </Card>
-            
-            <Card className="p-6 hover:shadow-lg transition-all duration-300">
-              <h3 className="text-xl font-semibold mb-2">Bachelor of Commerce (BCom)</h3>
-              <p className="text-muted-foreground mb-4">3 Years | Commerce Knowledge</p>
-              <Button className="w-full">Explore BCom</Button>
-            </Card>
-            
-            <Card className="p-6 hover:shadow-lg transition-all duration-300">
-              <h3 className="text-xl font-semibold mb-2">Master of Commerce (MCom)</h3>
-              <p className="text-muted-foreground mb-4">2 Years | Advanced Commerce</p>
-              <Button className="w-full">Explore MCom</Button>
-            </Card>
+            {[
+              { title: 'Master of Business Administration (MBA)', meta: '2 Years | Management Excellence', href: '/mba-smu', label: 'Explore MBA' },
+              { title: 'Master of Computer Applications (MCA)', meta: '2 Years | IT Leadership', href: '/mca-smu', label: 'Explore MCA' },
+              { title: 'Bachelor of Arts (BA)', meta: '3 Years | Liberal Arts', href: '/ba-smu', label: 'Explore BA' },
+              { title: 'Master of Arts (MA)', meta: '2 Years | Advanced Humanities', href: '/ma-smu', label: 'Explore MA' },
+              { title: 'Bachelor of Commerce (BCom)', meta: '3 Years | Commerce Knowledge', href: '/bcom-smu', label: 'Explore BCom' },
+              { title: 'Master of Commerce (MCom)', meta: '2 Years | Advanced Commerce', href: '/mcom-smu', label: 'Explore MCom' },
+            ].map((p) => (
+              <Card key={p.href} className="p-6 hover:shadow-lg transition-all duration-300 flex flex-col">
+                <h3 className="text-xl font-semibold mb-2">{p.title}</h3>
+                <p className="text-muted-foreground mb-4">{p.meta}</p>
+                <a href={p.href} className="mt-auto">
+                  <Button className="w-full">{p.label}</Button>
+                </a>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
+
 
       {/* Contact Section */}
       <section className="py-16 bg-background">
