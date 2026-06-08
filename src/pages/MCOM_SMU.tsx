@@ -4,6 +4,7 @@ import RankingsAccreditations from '@/components/RankingsAccreditations';
 import OnlineAdvantagesSection from '@/components/OnlineAdvantagesSection';
 import CourseCurriculumSection from '@/components/CourseCurriculumSection';
 import CourseFeesSection from '@/components/CourseFeesSection';
+import ManipalSampleDegreeSection from '@/components/ManipalSampleDegreeSection';
 import SpecializationCard from '@/components/SpecializationCard';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -29,8 +30,8 @@ const MCOM_SMU = () => {
     <div className="min-h-screen bg-background">
       <Header />
       
-      <main className="pt-20">
-        <section className="relative py-20 bg-gradient-to-br from-green-50 to-emerald-100 dark:from-green-900/20 dark:to-emerald-800/20">
+      <main>
+        <section className="relative pt-32 md:pt-36 pb-16 bg-gradient-to-br from-green-50 to-emerald-100 dark:from-green-900/20 dark:to-emerald-800/20">
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-8">
@@ -78,7 +79,7 @@ const MCOM_SMU = () => {
           </div>
         </section>
 
-        <section className="py-20">
+        <section className="py-12 md:py-16">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Advanced Commerce Specializations</h2>
@@ -91,10 +92,11 @@ const MCOM_SMU = () => {
           </div>
         </section>
 
-        <CourseCurriculumSection />
-        <CourseFeesSection />
-        <OnlineAdvantagesSection />
         <RankingsAccreditations />
+        <OnlineAdvantagesSection />
+        <CourseCurriculumSection />
+        <ManipalSampleDegreeSection />
+        <CourseFeesSection />
       </main>
       
       <Footer />

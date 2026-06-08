@@ -4,26 +4,15 @@ import RankingsAccreditations from '@/components/RankingsAccreditations';
 import OnlineAdvantagesSection from '@/components/OnlineAdvantagesSection';
 import CourseCurriculumSection from '@/components/CourseCurriculumSection';
 import CourseFeesSection from '@/components/CourseFeesSection';
+import ManipalSampleDegreeSection from '@/components/ManipalSampleDegreeSection';
 import SpecializationCard from '@/components/SpecializationCard';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card } from '@/components/ui/card';
 import { Clock, Users, Calendar, Award, BookOpen, TrendingUp, DollarSign, Briefcase, Globe, FileText } from 'lucide-react';
-import { useState, useRef, useEffect } from 'react';
 import smuLogo from '@/assets/smulogo.jpg';
 
 const MA_SMU = () => {
-  const [activeSection, setActiveSection] = useState('overview');
-  const sectionsRef = useRef<{ [key: string]: HTMLElement | null }>({});
-
-  const navigationDots = [
-    { id: 'overview', label: 'Overview' },
-    { id: 'specializations', label: 'Specializations' },
-    { id: 'curriculum', label: 'Curriculum' },
-    { id: 'fees', label: 'Fees' },
-    { id: 'advantages', label: 'Advantages' },
-  ];
-
   const specializations = [
     { icon: Globe, title: 'English Literature' },
     { icon: FileText, title: 'Journalism & Mass Communication' },
@@ -33,61 +22,13 @@ const MA_SMU = () => {
     { icon: Award, title: 'History' },
   ];
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
-          }
-        });
-      },
-      { threshold: 0.3 }
-    );
-
-    Object.values(sectionsRef.current).forEach((section) => {
-      if (section) observer.observe(section);
-    });
-
-    return () => observer.disconnect();
-  }, []);
-
-  const scrollToSection = (sectionId: string) => {
-    const element = sectionsRef.current[sectionId];
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <div className="min-h-screen bg-background">
       <Header />
       
-      {/* Floating Navigation Dots */}
-      <div className="fixed right-8 top-1/2 transform -translate-y-1/2 z-40 space-y-3">
-        {navigationDots.map((dot) => (
-          <button
-            key={dot.id}
-            onClick={() => scrollToSection(dot.id)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 relative group ${
-              activeSection === dot.id ? 'bg-primary scale-125' : 'bg-muted-foreground/30 hover:bg-primary/60'
-            }`}
-            title={dot.label}
-          >
-            <span className="absolute right-6 top-1/2 transform -translate-y-1/2 bg-black text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-              {dot.label}
-            </span>
-          </button>
-        ))}
-      </div>
-
-      <main className="pt-20">
+      <main>
         {/* Hero Section */}
-        <section 
-          id="overview" 
-          ref={(el) => sectionsRef.current.overview = el}
-          className="relative py-20 bg-gradient-to-br from-green-50 to-emerald-100 dark:from-green-900/20 dark:to-emerald-800/20"
-        >
+        <section className="relative pt-32 md:pt-36 pb-16 bg-gradient-to-br from-green-50 to-emerald-100 dark:from-green-900/20 dark:to-emerald-800/20">
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-8">
@@ -161,11 +102,7 @@ const MA_SMU = () => {
         </section>
 
         {/* Specializations Section */}
-        <section 
-          id="specializations" 
-          ref={(el) => sectionsRef.current.specializations = el}
-          className="py-20"
-        >
+        <section className="py-12 md:py-16">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -188,32 +125,11 @@ const MA_SMU = () => {
           </div>
         </section>
 
-        {/* Curriculum Section */}
-        <section 
-          id="curriculum" 
-          ref={(el) => sectionsRef.current.curriculum = el}
-        >
-          <CourseCurriculumSection />
-        </section>
-
-        {/* Fees Section */}
-        <section 
-          id="fees" 
-          ref={(el) => sectionsRef.current.fees = el}
-        >
-          <CourseFeesSection />
-        </section>
-
-        {/* Advantages Section */}
-        <section 
-          id="advantages" 
-          ref={(el) => sectionsRef.current.advantages = el}
-        >
-          <OnlineAdvantagesSection />
-        </section>
-
-        {/* Rankings and Accreditations */}
         <RankingsAccreditations />
+        <OnlineAdvantagesSection />
+        <CourseCurriculumSection />
+        <ManipalSampleDegreeSection />
+        <CourseFeesSection />
       </main>
       
       <Footer />

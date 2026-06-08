@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import mujLogo from '@/assets/muj_logo-removebg-preview.png';
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -83,12 +84,12 @@ const BCA = () => {
       
 
       {/* Hero Section */}
-      <section className="py-16" style={{ backgroundColor: '#E6E0FF' }}>
+      <section className="pt-32 md:pt-36 pb-12" style={{ backgroundColor: '#E6E0FF' }}>
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="flex items-center gap-4 mb-6">
-                <img src="src/assets/muj_logo-removebg-preview.png" alt="MUJ" className="h-12" />
+                <img src={mujLogo} alt="MUJ" className="h-12" />
                 <div className="w-px h-12 bg-border"></div>
                 <Badge className="bg-success/10 text-success border-success/20">NAAC A+ Accredited</Badge>
               </div>
