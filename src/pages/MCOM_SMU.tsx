@@ -4,6 +4,7 @@ import RankingsAccreditations from '@/components/RankingsAccreditations';
 import OnlineAdvantagesSection from '@/components/OnlineAdvantagesSection';
 import CourseCurriculumSection from '@/components/CourseCurriculumSection';
 import CourseFeesSection from '@/components/CourseFeesSection';
+import ManipalSampleDegreeSection from '@/components/ManipalSampleDegreeSection';
 import SpecializationCard from '@/components/SpecializationCard';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -29,7 +30,7 @@ const MCOM_SMU = () => {
     <div className="min-h-screen bg-background">
       <Header />
       
-      <main className="pt-20">
+      <main>
         <section className="relative py-20 bg-gradient-to-br from-green-50 to-emerald-100 dark:from-green-900/20 dark:to-emerald-800/20">
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -91,10 +92,11 @@ const MCOM_SMU = () => {
           </div>
         </section>
 
-        <CourseCurriculumSection />
-        <CourseFeesSection />
-        <OnlineAdvantagesSection />
         <RankingsAccreditations />
+        <OnlineAdvantagesSection />
+        <CourseCurriculumSection />
+        <ManipalSampleDegreeSection />
+        <CourseFeesSection />
       </main>
       
       <Footer />
