@@ -302,7 +302,7 @@ const OnlineMA = () => {
         title="Online MA Programs - Master of Arts"
         description="Pursue Online MA from top universities. Advanced arts program with specializations in Psychology, English Literature, Political Science, History. Get placement assistance and research opportunities."
         keywords="online ma, master of arts, online arts masters, ma degree online"
-        canonical="/courses/ma"
+        canonical="https://avedu.in/courses/ma"
       />
       <NavigationHeader />
 

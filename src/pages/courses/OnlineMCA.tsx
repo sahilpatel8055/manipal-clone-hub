@@ -392,7 +392,7 @@ const OnlineMCA = () => {
         title="Online MCA Programs - Master of Computer Applications"
         description="Pursue Online MCA from top universities. Advanced computer applications program with specializations in AI, Cloud Computing, Data Science. Get placement assistance and industry-relevant curriculum."
         keywords="online MCA, master computer applications, online computer science masters, MCA degree online"
-        canonical="/courses/mca"
+        canonical="https://avedu.in/courses/mca"
       />
       <NavigationHeader />
 
