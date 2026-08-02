@@ -83,7 +83,7 @@ const JainUniversity = () => {
         title="Jain University Online Degree Programs - UGC Approved Online Courses"
         description="Get your online degree from Jain University. Choose from MBA, BBA, MCA, BCA, M.Com, B.Com, and more. NAAC A++ accredited with industry-relevant curriculum."
         keywords="Jain University Online, Online MBA, Online BBA, Online Degree, Distance Learning, UGC Approved, NAAC A++"
-        canonical="https://avedu.in/jain-university-online"
+        canonical="https://avedu.in/university/jain"
       />
       
       <NavigationHeader />

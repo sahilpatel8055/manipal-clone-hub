@@ -1,191 +1,168 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-  
-  <!-- Homepage -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://avedu.in/</loc>
-    <lastmod>2025-01-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
-    <image:image>
-      <image:loc>https://avedu.in/assets/hero-education.jpg</image:loc>
-      <image:title>AVEDU Online Education Platform</image:title>
-    </image:image>
   </url>
-
-  <!-- Universities Page -->
   <url>
     <loc>https://avedu.in/universities</loc>
-    <lastmod>2025-01-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-
-  <!-- University Pages -->
   <url>
     <loc>https://avedu.in/university/ignou</loc>
-    <lastmod>2025-01-01</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://avedu.in/assets/ignou-logo.png</image:loc>
-      <image:title>IGNOU - Indira Gandhi National Open University</image:title>
-    </image:image>
   </url>
-  
   <url>
     <loc>https://avedu.in/university/manipal</loc>
-    <lastmod>2025-01-01</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://avedu.in/assets/manipal-logo.png</image:loc>
-      <image:title>Manipal University Online</image:title>
-    </image:image>
   </url>
-  
   <url>
     <loc>https://avedu.in/university/amity</loc>
-    <lastmod>2025-01-01</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://avedu.in/assets/amity-logo.jpg</image:loc>
-      <image:title>Amity University Online</image:title>
-    </image:image>
   </url>
-  
   <url>
     <loc>https://avedu.in/university/lpu</loc>
-    <lastmod>2025-01-01</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://avedu.in/assets/lpu-logo.jpg</image:loc>
-      <image:title>Lovely Professional University Online</image:title>
-    </image:image>
   </url>
-  
-  <url>
-    <loc>https://avedu.in/university/sikkim</loc>
-    <lastmod>2025-01-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://avedu.in/assets/smu-logo.jpg</image:loc>
-      <image:title>Sikkim Manipal University Online</image:title>
-    </image:image>
-  </url>
-  
   <url>
     <loc>https://avedu.in/university/uttaranchal</loc>
-    <lastmod>2025-01-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://avedu.in/assets/uttaranchal-logo.png</image:loc>
-      <image:title>Uttaranchal University Online</image:title>
-    </image:image>
-  </url>
-  
-  <url>
-    <loc>https://avedu.in/university/dusol</loc>
-    <lastmod>2025-01-01</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  
-  <url>
-    <loc>https://avedu.in/university/mangalyatan</loc>
-    <lastmod>2025-01-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
   <url>
     <loc>https://avedu.in/university/vgu</loc>
-    <lastmod>2025-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://avedu.in/university/smu</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://avedu.in/university/mangalyatan</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://avedu.in/university/du-sol</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://avedu.in/university/jain</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://avedu.in/courses</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://avedu.in/courses/mba</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://avedu.in/courses/mca</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://avedu.in/courses/mcom</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://avedu.in/courses/ma</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://avedu.in/courses/bca</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://avedu.in/courses/bba</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://avedu.in/courses/bcom</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://avedu.in/courses/ba</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://avedu.in/ignou/online-mba</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
-
-  <!-- Course Category Pages -->
   <url>
-    <loc>https://avedu.in/courses/online-mba</loc>
-    <lastmod>2025-01-01</lastmod>
+    <loc>https://avedu.in/ignou/online-mca</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://avedu.in/manipal/online-mba</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://avedu.in/manipal/online-bca</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://avedu.in/amity/online-mba</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://avedu.in/lpu/online-bba</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://avedu.in/chandigarh-university/online-mcom</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://avedu.in/comparison</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://avedu.in/assets/course/mba.jpg</image:loc>
-      <image:title>Online MBA Programs</image:title>
-    </image:image>
   </url>
-  
   <url>
-    <loc>https://avedu.in/courses/online-bba</loc>
-    <lastmod>2025-01-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://avedu.in/assets/course/bba.jpg</image:loc>
-      <image:title>Online BBA Programs</image:title>
-    </image:image>
+    <loc>https://avedu.in/blog</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
   </url>
-  
-  <url>
-    <loc>https://avedu.in/courses/online-tech</loc>
-    <lastmod>2025-01-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://avedu.in/assets/course/bca.jpg</image:loc>
-      <image:title>Online BCA/MCA Programs</image:title>
-    </image:image>
-  </url>
-  
-  <url>
-    <loc>https://avedu.in/courses/online-commerce</loc>
-    <lastmod>2025-01-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://avedu.in/assets/course/bcom.jpg</image:loc>
-      <image:title>Online Commerce Programs</image:title>
-    </image:image>
-  </url>
-  
-  <url>
-    <loc>https://avedu.in/courses/online-arts</loc>
-    <lastmod>2025-01-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://avedu.in/assets/course/ba.jpg</image:loc>
-      <image:title>Online Arts Programs</image:title>
-    </image:image>
-  </url>
-
-  <!-- Legal Pages -->
   <url>
     <loc>https://avedu.in/privacy-policy</loc>
-    <lastmod>2025-01-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
-  
   <url>
     <loc>https://avedu.in/terms-conditions</loc>
-    <lastmod>2025-01-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
-  
   <url>
     <loc>https://avedu.in/disclaimer</loc>
-    <lastmod>2025-01-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
-
 </urlset>

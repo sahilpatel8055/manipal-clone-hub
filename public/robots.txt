@@ -10,21 +10,30 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
+# AI answer engines
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
 User-agent: *
 Allow: /
 Disallow: /admin/
 Disallow: /private/
-Disallow: /lovable-uploads/
 
-# Important pages for crawlers
+# Important clusters for crawlers
 Allow: /university/
 Allow: /courses/
+Allow: /comparison
+Allow: /scholarships
+Allow: /blog
 Allow: /privacy-policy
 Allow: /terms-conditions
 Allow: /disclaimer
 
-# Sitemap location
+# Sitemaps
 Sitemap: https://avedu.in/sitemap.xml
-
-# Crawl-delay (be respectful to server resources)
-Crawl-delay: 1

@@ -221,7 +221,7 @@ const OnlineMBA = () => {
         title="Online MBA Programs 2024 | Top Universities | Fees, Placement & Admission"
         description="Explore best online MBA programs from top universities like Manipal, Amity, LPU. Compare fees, specializations, placement records. UGC approved degrees with 100% support."
         keywords="online MBA, MBA distance education, online MBA fees, MBA placement, top MBA universities, UGC approved MBA"
-        canonical="https://avedu.in/courses/online-mba"
+        canonical="https://avedu.in/courses/mba"
       />
       <NavigationHeader />
 

@@ -1,6 +1,7 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { ArrowRight, BookOpen, Building, GraduationCap } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { getInternalLinks } from "@/lib/seo/internal-links";
 
 interface SEOInternalLinksProps {
   pageType: "university" | "course" | "blog" | "hub";
@@ -98,7 +99,20 @@ const SEOInternalLinks: React.FC<SEOInternalLinksProps> = ({
     }
   };
 
-  const links = relatedLinks.length > 0 ? relatedLinks : getDefaultLinks();
+  const location = useLocation();
+  // Curated links win; otherwise the link engine returns 8-15 contextual
+  // destinations for the current route, falling back to the static defaults.
+  const engineLinks = getInternalLinks(location.pathname).map((l) => ({
+    title: l.title,
+    url: l.url,
+    description: l.description,
+  }));
+  const links =
+    relatedLinks.length > 0
+      ? relatedLinks
+      : engineLinks.length > 0
+        ? engineLinks
+        : getDefaultLinks();
   
   const getIcon = (pageType: string) => {
     switch (pageType) {

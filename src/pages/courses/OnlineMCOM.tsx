@@ -351,7 +351,7 @@ const OnlineMCOM = () => {
         title="Online M.Com Programs - Master of Commerce"
         description="Pursue Online M.Com from top universities. Advanced commerce program with specializations in Financial Management, Business Analytics, Taxation. Get placement assistance and industry-relevant curriculum."
         keywords="online mcom, master of commerce, online commerce masters, mcom degree online"
-        canonical="/courses/mcom"
+        canonical="https://avedu.in/courses/mcom"
       />
       <NavigationHeader />
 
