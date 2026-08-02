@@ -132,6 +132,18 @@ const EmbeddedCounselingForm: React.FC<EmbeddedCounselingFormProps> = ({ variant
       </CardHeader>
       <CardContent className="p-5 pt-0">
         <form onSubmit={handleSubmit} className={isCompact ? "space-y-2" : "space-y-3"}>
+          {/* Honeypot — hidden from real users */}
+          <input
+            type="text"
+            name="website"
+            tabIndex={-1}
+            autoComplete="off"
+            aria-hidden="true"
+            value={formData.website}
+            onChange={(e) => handleInputChange('website', e.target.value)}
+            className="absolute left-[-9999px] h-0 w-0 opacity-0"
+          />
+
           <div>
             <Label htmlFor="fullName" className="text-sm font-medium">
               Full Name *
