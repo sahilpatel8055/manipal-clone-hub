@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import GlobalIntelligentPopup from "@/components/ui/global-intelligent-popup";
+import SEOHead from "@/components/ui/seo-head";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Universities from "./pages/Universities";
@@ -102,6 +103,9 @@ const App = () => {
   
   return (
     <>
+      {/* Route-registry driven metadata + base schema for every page.
+          Page-level <SEOHead> renders after this and overrides it. */}
+      <SEOHead />
       <Toaster />
       <Sonner />
       <ScrollToTop />
