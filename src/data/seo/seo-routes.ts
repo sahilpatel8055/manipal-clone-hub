@@ -8,6 +8,8 @@
  * This file contains NO UI. It is data only.
  */
 
+import { COMPARE_PAIRS } from "@/data/comparison-universities";
+
 export const SITE_URL = "https://avedu.in";
 export const SITE_NAME = "AVEDU";
 export const DEFAULT_OG_IMAGE =
@@ -445,7 +447,6 @@ export const SEO_ROUTES: SeoRoute[] = [
     keywords: "online admission process, online degree documents required",
     priority: "0.8",
     changefreq: "weekly",
-    noSitemap: true, // client-side redirect shell until the standalone page ships
   },
   {
     path: "/online-mba-admission",
@@ -458,7 +459,6 @@ export const SEO_ROUTES: SeoRoute[] = [
     keywords: "online mba admission, mba admission last date",
     priority: "0.8",
     changefreq: "weekly",
-    noSitemap: true, // client-side redirect shell until the standalone page ships
   },
   {
     path: "/online-bba-admission",
@@ -471,7 +471,6 @@ export const SEO_ROUTES: SeoRoute[] = [
     keywords: "online bba admission, bba admission process",
     priority: "0.8",
     changefreq: "weekly",
-    noSitemap: true, // client-side redirect shell until the standalone page ships
   },
   {
     path: "/online-mba-fees",
@@ -484,7 +483,6 @@ export const SEO_ROUTES: SeoRoute[] = [
     keywords: "online mba fees, cheapest online mba india, mba fees comparison",
     priority: "0.8",
     changefreq: "weekly",
-    noSitemap: true, // client-side redirect shell until the standalone page ships
   },
   {
     path: "/online-mba-eligibility",
@@ -497,7 +495,6 @@ export const SEO_ROUTES: SeoRoute[] = [
     keywords: "online mba eligibility, mba without cat, mba eligibility criteria",
     priority: "0.8",
     changefreq: "weekly",
-    noSitemap: true, // client-side redirect shell until the standalone page ships
   },
   {
     path: "/scholarships",
@@ -509,7 +506,6 @@ export const SEO_ROUTES: SeoRoute[] = [
     keywords: "online degree scholarship, mba scholarship india, fee waiver online course",
     priority: "0.8",
     changefreq: "weekly",
-    noSitemap: true, // client-side redirect shell until the standalone page ships
   },
 
   /* ---------------- Comparison + content clusters ---------------- */
@@ -587,13 +583,21 @@ export const SEO_REDIRECTS: Record<string, string> = {
   "/onlinecu": "/universities",
   "/ignoudistance": "/university/ignou",
   "/onlineuu": "/university/uttaranchal",
-  "/online-mba-admission": "/courses/mba",
-  "/online-mba-fees": "/courses/mba",
-  "/online-mba-eligibility": "/courses/mba",
-  "/online-bba-admission": "/courses/bba",
-  "/online-courses-admission-process": "/universities",
-  "/scholarships": "/",
 };
+
+/* ---- Phase 2: auto-generated "X vs Y" comparison routes ---- */
+const COMPARISON_ROUTES: SeoRoute[] = COMPARE_PAIRS.map(({ slug, a, b }) => ({
+  path: `/compare/${slug}`,
+  cluster: "comparison" as TopicCluster,
+  h1: `${a.shortName} vs ${b.shortName} Online — Fees, NAAC & Placements`,
+  title: `${a.shortName} vs ${b.shortName} Online 2026 — Fees & NAAC Compared | AVEDU`,
+  description: `${a.shortName} vs ${b.shortName} online degrees compared: fees (${a.feePerYear} vs ${b.feePerYear}), NAAC grade, exam mode, programmes and placement support.`,
+  keywords: `${a.shortName.toLowerCase()} vs ${b.shortName.toLowerCase()}, ${a.shortName.toLowerCase()} or ${b.shortName.toLowerCase()} online`,
+  priority: "0.7",
+  changefreq: "monthly" as const,
+}));
+
+SEO_ROUTES.push(...COMPARISON_ROUTES);
 
 const ROUTE_BY_PATH = new Map(SEO_ROUTES.map((r) => [r.path, r]));
 
