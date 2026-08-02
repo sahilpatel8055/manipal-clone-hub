@@ -167,6 +167,18 @@ const CounselingForm: React.FC<CounselingFormProps> = ({ open, onOpenChange, onF
             </DialogHeader>
 
             <form onSubmit={handleSubmit} className="space-y-3">
+              {/* Honeypot — hidden from real users */}
+              <input
+                type="text"
+                name="website"
+                tabIndex={-1}
+                autoComplete="off"
+                aria-hidden="true"
+                value={formData.website}
+                onChange={(e) => handleInputChange('website', e.target.value)}
+                className="absolute left-[-9999px] h-0 w-0 opacity-0"
+              />
+
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 sm:gap-4">
                 <div>
                   <Label htmlFor="fullName" className="text-sm font-bold text-gray-700">
