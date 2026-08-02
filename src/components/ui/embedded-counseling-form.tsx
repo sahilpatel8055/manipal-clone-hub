@@ -49,17 +49,11 @@ const EmbeddedCounselingForm: React.FC<EmbeddedCounselingFormProps> = ({ variant
     city: "",
     course: "",
     consent: true,
+    website: "", // honeypot
   });
   
   const { toast } = useToast();
   const [loading, setLoading] = useState(false);
-
-  // Pre-warm the backend on mount to reduce first-submit latency
-  useEffect(() => {
-    try {
-      fetch('https://avedu.onrender.com/healthz', { mode: 'no-cors' });
-    } catch {}
-  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -83,120 +77,46 @@ const EmbeddedCounselingForm: React.FC<EmbeddedCounselingFormProps> = ({ variant
     }
 
     const selectedCourse = (courses.find(c => c.value === formData.course)?.label) || formData.course;
-    const payload = {
-      name: formData.fullName.trim(),
-      email: formData.email.trim(),
-      phone: formData.contactNumber.trim(),
-      state: formData.state,
-      city: (formData.city || '').trim(),
-      course: selectedCourse,
-    };
 
     try {
       setLoading(true);
-      
-      // Try primary server
-      let success = false;
-      try {
-        const res = await fetch('https://avedu.onrender.com/api/submit-lead', {
-          method: 'POST',
-          headers: { 
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-          },
-          mode: 'cors',
-          body: JSON.stringify(payload),
-        });
 
-        const data = await res.json().catch(() => ({}));
-        if (res.ok && data.success !== false) {
-          success = true;
-        } else {
-          throw new Error(data.error || `Server error: ${res.status}`);
-        }
-      } catch (networkError) {
-        console.log('Primary server failed, using backup method:', networkError);
-        
-        // Backup method - create mailto link with all details
-        const mailtoSubject = encodeURIComponent('Free Counseling Request - AVEDU');
-        const mailtoBody = encodeURIComponent(`
-Dear AVEDU Team,
+      const result = await submitLead({
+        name: formData.fullName,
+        email: formData.email,
+        phone: formData.contactNumber,
+        state: formData.state,
+        city: formData.city,
+        course: selectedCourse,
+        website: formData.website,
+      });
 
-I would like to request free counseling for online university courses.
-
-My Details:
-- Name: ${payload.name}
-- Email: ${payload.email}
-- Phone: ${payload.phone}
-- State: ${payload.state}
-- City: ${payload.city}
-- Interested Course: ${payload.course}
-
-Please contact me at your earliest convenience.
-
-Best regards,
-${payload.name}
-        `);
-        
-        // Open mailto link
-        const mailtoLink = `mailto:info@avedu.in?subject=${mailtoSubject}&body=${mailtoBody}`;
-        window.open(mailtoLink, '_blank');
-        
-        // Also log to localStorage as backup
-        const backupData = {
-          ...payload,
-          timestamp: new Date().toISOString(),
-          submissionId: Date.now().toString()
-        };
-        
-        try {
-          const existingBackups = JSON.parse(localStorage.getItem('avedu_backup_submissions') || '[]');
-          existingBackups.push(backupData);
-          localStorage.setItem('avedu_backup_submissions', JSON.stringify(existingBackups));
-        } catch (storageError) {
-          console.log('Could not save to localStorage:', storageError);
-        }
-        
-        success = true; // Consider backup method as successful
+      if (!result.success) {
+        throw new Error(result.error || 'Submission failed');
       }
 
-      if (success) {
-        // Track Google Ads conversion
-        if (typeof window !== 'undefined' && window.gtag_report_conversion) {
-          window.gtag_report_conversion();
-        }
-
-        toast({
-          title: "Form Submitted Successfully!",
-          description: "Our counselor will contact you within 24 hours. Check your email client for backup details.",
-        });
-
-        // Reset form
-        setFormData(prev => ({ ...prev, fullName: '', contactNumber: '', email: '', state: '', city: '', course: '' }));
+      if (typeof window !== 'undefined' && window.gtag_report_conversion) {
+        window.gtag_report_conversion();
       }
+
+      toast({
+        title: "Form Submitted Successfully!",
+        description: "Our counselor will contact you within 24 hours.",
+      });
+
+      setFormData(prev => ({ ...prev, fullName: '', contactNumber: '', email: '', state: '', city: '', course: '', website: '' }));
     } catch (err: any) {
       console.error('Form submission error:', err);
-      
-      let errorMessage = 'Network error. Please check your connection and try again.';
-      if (err?.message) {
-        if (err.message.includes('Unable to parse range')) {
-          errorMessage = 'Server configuration error. Please contact support directly at info@avedu.in';
-        } else if (err.message.includes('Failed to fetch')) {
-          errorMessage = 'Server is temporarily unavailable. An email backup has been created for you.';
-        } else {
-          errorMessage = err.message;
-        }
-      }
-      
       toast({
         title: 'Submission failed',
-        description: errorMessage,
+        description: err?.message || 'Network error. Please try again or email info@avedu.in',
         variant: 'destructive',
       });
     } finally {
       setLoading(false);
     }
   };
+
 
   const handleInputChange = (field: string, value: string | boolean) => {
     setFormData(prev => ({ ...prev, [field]: value }));
