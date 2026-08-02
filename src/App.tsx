@@ -76,14 +76,13 @@ import {
   IGNOUDistancePage,
   OnlineUUPage
 } from "./pages/seo/KeywordPages";
-import { 
-  OnlineMBAAdmissionPage,
-  OnlineMBAFeesPage,
-  OnlineMBAEligibilityPage,
-  OnlineBBAAdmissionPage,
-  OnlineCoursesAdmissionProcessPage,
-  ScholarshipsPage
-} from "./pages/courses/CourseAdmissionPages";
+import OnlineMBAAdmission from "./pages/authority/OnlineMBAAdmission";
+import OnlineMBAFees from "./pages/authority/OnlineMBAFees";
+import OnlineMBAEligibility from "./pages/authority/OnlineMBAEligibility";
+import OnlineBBAAdmission from "./pages/authority/OnlineBBAAdmission";
+import OnlineCoursesAdmissionProcess from "./pages/authority/OnlineCoursesAdmissionProcess";
+import ScholarshipsPage from "./pages/authority/Scholarships";
+import UniversityVsPage from "./pages/comparison/UniversityVsPage";
 
 // Component to scroll to top on route change
 const ScrollToTop = () => {
@@ -137,11 +136,11 @@ const App = () => {
           <Route path="/onlineuu" element={<OnlineUUPage />} />
 
           {/* Course Admission SEO Routes */}
-          <Route path="/online-mba-admission" element={<OnlineMBAAdmissionPage />} />
-          <Route path="/online-mba-fees" element={<OnlineMBAFeesPage />} />
-          <Route path="/online-mba-eligibility" element={<OnlineMBAEligibilityPage />} />
-          <Route path="/online-bba-admission" element={<OnlineBBAAdmissionPage />} />
-          <Route path="/online-courses-admission-process" element={<OnlineCoursesAdmissionProcessPage />} />
+          <Route path="/online-mba-admission" element={<OnlineMBAAdmission />} />
+          <Route path="/online-mba-fees" element={<OnlineMBAFees />} />
+          <Route path="/online-mba-eligibility" element={<OnlineMBAEligibility />} />
+          <Route path="/online-bba-admission" element={<OnlineBBAAdmission />} />
+          <Route path="/online-courses-admission-process" element={<OnlineCoursesAdmissionProcess />} />
           <Route path="/scholarships" element={<ScholarshipsPage />} />
 
           {/* University-specific course SEO routes */}
@@ -189,6 +188,7 @@ const App = () => {
 
           {/* University Comparison Page */}
           <Route path="/comparison" element={<UniversityComparison />} />
+          <Route path="/compare/:slug" element={<UniversityVsPage />} />
 
           {/* Legal pages */}
           <Route path="/disclaimer" element={<Disclaimer />} />
