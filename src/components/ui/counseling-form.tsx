@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -7,6 +7,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Checkbox } from "@/components/ui/checkbox";
 import { X, Star, Users, GraduationCap, Award, Clock, Phone } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { submitLead } from "@/utils/submit-lead";
 
 // Add type declaration for gtag_report_conversion
 declare global {
