@@ -60,8 +60,8 @@ const ProgramHighlightsSlider = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
-    let scrollInterval: NodeJS.Timeout | null = null;
-    let scrollTimeout: NodeJS.Timeout | null = null;
+    let scrollInterval: ReturnType<typeof setTimeout> | null = null;
+    let scrollTimeout: ReturnType<typeof setTimeout> | null = null;
     const scrollContainer = scrollContainerRef.current;
 
     const startAutoScroll = () => {

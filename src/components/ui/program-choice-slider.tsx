@@ -80,8 +80,8 @@ const ProgramChoiceSlider: React.FC<ProgramChoiceSliderProps> = ({ universityTyp
   };
 
   useEffect(() => {
-    let scrollInterval: NodeJS.Timeout | null = null;
-    let scrollTimeout: NodeJS.Timeout | null = null;
+    let scrollInterval: ReturnType<typeof setTimeout> | null = null;
+    let scrollTimeout: ReturnType<typeof setTimeout> | null = null;
     const scrollContainer = scrollContainerRef.current;
 
     const startAutoScroll = () => {

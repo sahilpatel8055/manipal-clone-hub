@@ -23,8 +23,8 @@ export const useIntelligentPopup = (
   const timeTriggered = useRef(false);
   const scrollTriggered = useRef(false);
   const exitIntentTriggered = useRef(false);
-  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
-  const intervalRef = useRef<NodeJS.Timeout | null>(null);
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const intervalRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   // Check if user is in cooldown period
   const isInCooldown = (): boolean => {
