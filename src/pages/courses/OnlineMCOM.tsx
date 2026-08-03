@@ -38,6 +38,9 @@ import amityLogo from "@/assets/amity-logo.jpg";
 import lpuLogo from "@/assets/lpu-logo.jpg";
 import mangalyatanLogo from "@/assets/mangalyatan-logo.png";
 import HorizontalUniversityScroll from "@/components/ui/horizontal-university-scroll";
+import SeoBreadcrumbs from "@/components/ui/seo-breadcrumbs";
+import RelatedContentSection from "@/components/ui/related-content-section";
+import EeatBlock from "@/components/ui/eeat-block";
 
 const OnlineMCOM = () => {
   const { openForm, CounselingFormComponent } = useCounselingForm();
@@ -354,6 +357,7 @@ const OnlineMCOM = () => {
         canonical="https://avedu.in/courses/mcom"
       />
       <NavigationHeader />
+      <SeoBreadcrumbs />
 
       {/* Hero Section */}
       <section id="top" className="py-12 bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -614,6 +618,8 @@ const OnlineMCOM = () => {
       </section>
 
       <RelevantBlogsSection pageType="course" />
+      <RelatedContentSection />
+      <EeatBlock />
       <Footer />
       <CounselingFormComponent />
     </div>

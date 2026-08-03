@@ -38,6 +38,9 @@ import bcaImg from "@/assets/course/bca.jpg";
 import baImg from "@/assets/course/ba.jpg";
 import bcomImg from "@/assets/course/bcom.jpg";
 import SectionNavigation from "@/components/ui/section-navigation";
+import SeoBreadcrumbs from "@/components/ui/seo-breadcrumbs";
+import RelatedContentSection from "@/components/ui/related-content-section";
+import EeatBlock from "@/components/ui/eeat-block";
 
 const DUSOL = () => {
   const { openForm, CounselingFormComponent } = useCounselingForm();
@@ -71,6 +74,7 @@ const DUSOL = () => {
   return (
     <div className="min-h-screen bg-background">
       <NavigationHeader />
+      <SeoBreadcrumbs />
 
       <section className="bg-gradient-to-br from-primary/10 via-background to-primary/5 py-6" id="top">
         <div className="container mx-auto px-4">
@@ -245,6 +249,10 @@ const DUSOL = () => {
           </div>
         </div>
       </section>
+
+      <RelatedContentSection />
+
+      <EeatBlock />
 
       <Footer />
       <CounselingFormComponent />

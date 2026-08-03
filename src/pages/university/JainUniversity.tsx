@@ -30,6 +30,9 @@ import bbaImg from "@/assets/course/bba.jpg";
 import mcaImg from "@/assets/course/mca.jpg";
 import bcaImg from "@/assets/course/bca.jpg";
 import baImg from "@/assets/course/ba.jpg";
+import SeoBreadcrumbs from "@/components/ui/seo-breadcrumbs";
+import RelatedContentSection from "@/components/ui/related-content-section";
+import EeatBlock from "@/components/ui/eeat-block";
 
 const approvals = [
   { name: 'UGC Entitled', icon: ugcIcon, description: 'The university is entitled by UGC to offer online degrees.', },
@@ -87,6 +90,7 @@ const JainUniversity = () => {
       />
       
       <NavigationHeader />
+      <SeoBreadcrumbs />
       
       {/* Header */}
       <header className="bg-white border-b border-gray-200 py-4">
@@ -691,6 +695,10 @@ const JainUniversity = () => {
           </div>
         </div>
       </section>
+
+      <RelatedContentSection />
+
+      <EeatBlock />
 
       <Footer />
       <CounselingFormComponent />

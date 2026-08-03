@@ -40,6 +40,9 @@ import manipalFront from "@/assets/manipal-1stdegree.jpg";
 import manipalBack from "@/assets/manipal-2nddegree.jpg";
 import RelevantBlogsSection from "@/components/ui/relevant-blogs-section";
 import UniversityComparisonTool from "@/components/ui/university-comparison-tool";
+import SeoBreadcrumbs from "@/components/ui/seo-breadcrumbs";
+import RelatedContentSection from "@/components/ui/related-content-section";
+import EeatBlock from "@/components/ui/eeat-block";
 
 const Manipal = () => {
   const { openForm, CounselingFormComponent } = useCounselingForm();
@@ -112,6 +115,7 @@ const Manipal = () => {
         }}
       />
       <NavigationHeader />
+      <SeoBreadcrumbs />
       
       {/* Hero Section with Integrated Slideshow */}
       <section className="bg-gradient-to-br from-primary/10 via-background to-primary/5 py-6" id="top">
@@ -400,6 +404,10 @@ const Manipal = () => {
           </div>
         </div>
       </section>
+
+      <RelatedContentSection />
+
+      <EeatBlock />
 
       <Footer />
       <CounselingFormComponent />

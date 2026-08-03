@@ -10,6 +10,9 @@ import EmbeddedCounselingForm from "@/components/ui/embedded-counseling-form";
 import SectionNavigation from "@/components/ui/section-navigation";
 import { useCounselingForm } from "@/hooks/use-counseling-form";
 import courseData from "../../data/courseData.json";
+import SeoBreadcrumbs from "@/components/ui/seo-breadcrumbs";
+import RelatedContentSection from "@/components/ui/related-content-section";
+import EeatBlock from "@/components/ui/eeat-block";
 
 // Mapping of icon names to components for dynamic rendering
 const iconMap = {
@@ -46,6 +49,7 @@ const CoursePage = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <NavigationHeader />
+      <SeoBreadcrumbs />
       <SectionNavigation sections={sections} />
 
       {/* Hero Section */}
@@ -270,6 +274,10 @@ const CoursePage = () => {
           </Button>
         </div>
       </section>
+
+      <RelatedContentSection />
+
+      <EeatBlock />
 
       <Footer />
       <CounselingFormComponent />

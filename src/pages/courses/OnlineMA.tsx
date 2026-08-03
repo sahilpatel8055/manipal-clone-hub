@@ -41,6 +41,9 @@ import mangalyatanLogo from "@/assets/mangalyatan-logo.png";
 import HorizontalUniversityScroll from "@/components/ui/horizontal-university-scroll";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useState } from "react";
+import SeoBreadcrumbs from "@/components/ui/seo-breadcrumbs";
+import RelatedContentSection from "@/components/ui/related-content-section";
+import EeatBlock from "@/components/ui/eeat-block";
 
 const OnlineMA = () => {
   const { openForm, CounselingFormComponent } = useCounselingForm();
@@ -305,6 +308,7 @@ const OnlineMA = () => {
         canonical="https://avedu.in/courses/ma"
       />
       <NavigationHeader />
+      <SeoBreadcrumbs />
 
       {/* Hero Section */}
       <section id="top" className="py-12 bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -590,6 +594,8 @@ const OnlineMA = () => {
         </div>
       </section>
       <RelevantBlogsSection pageType="course" />
+      <RelatedContentSection />
+      <EeatBlock />
       <Footer />
       <CounselingFormComponent />
     </div>

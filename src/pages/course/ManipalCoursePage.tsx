@@ -42,6 +42,9 @@ import manipalLmsImg from "@/assets/lms/muj.png";
 import { useCounselingForm } from "@/hooks/use-counseling-form";
 import LeadGenerationEnhancements from "@/components/ui/lead-generation-enhancements";
 import RelevantBlogsSection from "@/components/ui/relevant-blogs-section";
+import SeoBreadcrumbs from "@/components/ui/seo-breadcrumbs";
+import RelatedContentSection from "@/components/ui/related-content-section";
+import EeatBlock from "@/components/ui/eeat-block";
 
 // Updated specializationIcons mapping to use Lucide-React icons
 const specializationIcons = {
@@ -127,6 +130,7 @@ const ManipalCoursePage = () => {
         }}
       />
       <NavigationHeader />
+      <SeoBreadcrumbs />
       <SectionNavigation sections={sections} />
 
       {/* Header Section */}
@@ -419,6 +423,10 @@ const ManipalCoursePage = () => {
         title="MBA Career & Guidance Articles"
         maxBlogs={3}
       />
+
+      <RelatedContentSection />
+
+      <EeatBlock />
 
       <Footer />
     </div>

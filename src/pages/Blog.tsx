@@ -7,6 +7,9 @@ import NavigationHeader from "@/components/ui/navigation-header";
 import Footer from "@/components/ui/footer";
 import SEOHead from "@/components/ui/seo-head";
 import { Link } from "react-router-dom";
+import SeoBreadcrumbs from "@/components/ui/seo-breadcrumbs";
+import RelatedContentSection from "@/components/ui/related-content-section";
+import EeatBlock from "@/components/ui/eeat-block";
 
 const Blog = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -134,6 +137,7 @@ const Blog = () => {
         structuredData={blogStructuredData}
       />
       <NavigationHeader />
+      <SeoBreadcrumbs />
       
       {/* Hero Section */}
       <section className="bg-gradient-subtle py-16">
@@ -295,6 +299,10 @@ const Blog = () => {
           </div>
         </div>
       </section>
+
+      <RelatedContentSection />
+
+      <EeatBlock />
 
       <Footer />
     </div>

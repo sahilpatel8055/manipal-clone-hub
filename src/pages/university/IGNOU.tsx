@@ -43,6 +43,9 @@ import bcomImg from "@/assets/course/bcom.jpg";
 
 import { MovingBorderButton } from "@/components/ui/moving-border";
 import SectionNavigation from "@/components/ui/section-navigation";
+import SeoBreadcrumbs from "@/components/ui/seo-breadcrumbs";
+import RelatedContentSection from "@/components/ui/related-content-section";
+import EeatBlock from "@/components/ui/eeat-block";
 
 const IGNOU = () => {
   const { openForm, CounselingFormComponent } = useCounselingForm();
@@ -83,6 +86,7 @@ const IGNOU = () => {
   return (
     <div className="min-h-screen bg-background">
       <NavigationHeader />
+      <SeoBreadcrumbs />
       
       {/* Hero Section with Moving Border Buttons */}
       <section className="bg-gradient-to-br from-primary/10 via-background to-primary/5 py-6" id="top">
@@ -325,6 +329,10 @@ const IGNOU = () => {
           </div>
         </div>
       </section>
+
+      <RelatedContentSection />
+
+      <EeatBlock />
 
       <Footer />
       <CounselingFormComponent />

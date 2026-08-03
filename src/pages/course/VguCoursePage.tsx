@@ -15,6 +15,9 @@ import hiringPartnersImg from "@/assets/hiring-partners.png";
 import WhyOnlineProgramsSection from "@/components/ui/why-online-programs-section";
 import SectionNavigation from "@/components/ui/section-navigation";
 import vguLmsImg from "@/assets/lms/vgu.png";
+import SeoBreadcrumbs from "@/components/ui/seo-breadcrumbs";
+import RelatedContentSection from "@/components/ui/related-content-section";
+import EeatBlock from "@/components/ui/eeat-block";
 
 const VguCoursePage = () => {
   const { courseId } = useParams();
@@ -40,6 +43,7 @@ const VguCoursePage = () => {
   return (
     <div className="min-h-screen bg-background">
       <NavigationHeader />
+      <SeoBreadcrumbs />
       <SectionNavigation sections={sections} />
       
       {/* Hero Section */}
@@ -305,6 +309,10 @@ const VguCoursePage = () => {
         lmsImagePath={vguLmsImg} 
       />
       </div>
+
+      <RelatedContentSection />
+
+      <EeatBlock />
 
       <Footer />
     </div>

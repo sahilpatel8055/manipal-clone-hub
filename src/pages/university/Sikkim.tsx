@@ -37,6 +37,9 @@ import sikkimFront from "@/assets/smu.png";
 import sikkimBack from "@/assets/manipal-2nddegree.jpg";
 import UniversityComparisonTool from "@/components/ui/university-comparison-tool";
 import RelevantBlogsSection from "@/components/ui/relevant-blogs-section";
+import SeoBreadcrumbs from "@/components/ui/seo-breadcrumbs";
+import RelatedContentSection from "@/components/ui/related-content-section";
+import EeatBlock from "@/components/ui/eeat-block";
 
 const Sikkim = () => {
   const { openForm, CounselingFormComponent } = useCounselingForm();
@@ -84,6 +87,7 @@ const Sikkim = () => {
   return (
     <div className="min-h-screen bg-background">
       <NavigationHeader />
+      <SeoBreadcrumbs />
       
       {/* Hero Section with Moving Border Buttons */}
       <section className="bg-gradient-to-br from-primary/10 via-background to-primary/5 py-6" id="top">
@@ -348,6 +352,10 @@ const Sikkim = () => {
           </div>
         </div>
       </section>
+
+      <RelatedContentSection />
+
+      <EeatBlock />
 
       <Footer />
       <CounselingFormComponent />

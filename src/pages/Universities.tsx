@@ -9,6 +9,9 @@ import { MapPin, Star, Users, GraduationCap, ExternalLink } from "lucide-react";
 import universityPlaceholder from "@/assets/university-placeholder.jpg";
 import { Link } from "react-router-dom";
 import { useCounselingForm } from "@/hooks/use-counseling-form";
+import SeoBreadcrumbs from "@/components/ui/seo-breadcrumbs";
+import RelatedContentSection from "@/components/ui/related-content-section";
+import EeatBlock from "@/components/ui/eeat-block";
 
 const UniversityCard = ({ university, onOpenCounseling }: { university: any, onOpenCounseling?: () => void }) => {
   return (
@@ -91,6 +94,7 @@ const Universities = () => {
   return (
     <div className="min-h-screen bg-background">
       <NavigationHeader />
+      <SeoBreadcrumbs />
       
       {/* Hero Section */}
       <section className="py-16 bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -128,6 +132,10 @@ const Universities = () => {
           </div>
         </div>
       </section>
+
+      <RelatedContentSection />
+
+      <EeatBlock />
 
       <Footer />
       

@@ -15,6 +15,9 @@ import SectionNavigation from "@/components/ui/section-navigation";
 import hiringPartnersImg from "@/assets/hiring-partners.png";
 import WhyOnlineProgramsSection from "@/components/ui/why-online-programs-section";
 import uttaranchalLmsImg from "@/assets/lms/uu.png";
+import SeoBreadcrumbs from "@/components/ui/seo-breadcrumbs";
+import RelatedContentSection from "@/components/ui/related-content-section";
+import EeatBlock from "@/components/ui/eeat-block";
 
 const UttaranchalCoursePage = () => {
   const { courseId } = useParams();
@@ -39,6 +42,7 @@ const UttaranchalCoursePage = () => {
   return (
     <div className="min-h-screen bg-background">
       <NavigationHeader />
+      <SeoBreadcrumbs />
       <SectionNavigation sections={sections} />
       
       {/* Hero Section */}
@@ -290,6 +294,10 @@ const UttaranchalCoursePage = () => {
         universityName="Uttaranchal University" 
         lmsImagePath={uttaranchalLmsImg} 
       />
+
+      <RelatedContentSection />
+
+      <EeatBlock />
 
       <Footer />
     </div>

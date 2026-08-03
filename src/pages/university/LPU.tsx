@@ -37,6 +37,9 @@ import baImg from "@/assets/course/ba.jpg";
 import lpuDegree from "@/assets/lpu.png";
 import UniversityComparisonTool from "@/components/ui/university-comparison-tool";
 import RelevantBlogsSection from "@/components/ui/relevant-blogs-section";
+import SeoBreadcrumbs from "@/components/ui/seo-breadcrumbs";
+import RelatedContentSection from "@/components/ui/related-content-section";
+import EeatBlock from "@/components/ui/eeat-block";
 
 const LPU = () => {
   const { openForm, CounselingFormComponent } = useCounselingForm();
@@ -90,6 +93,7 @@ const LPU = () => {
         canonical="https://avedu.in/university/lpu"
       />
       <NavigationHeader />
+      <SeoBreadcrumbs />
       
       {/* Hero Section with Moving Border Buttons */}
       <section className="bg-gradient-to-br from-primary/10 via-background to-primary/5 py-6" id="top">
@@ -354,6 +358,10 @@ const LPU = () => {
           </div>
         </div>
       </section>
+
+      <RelatedContentSection />
+
+      <EeatBlock />
 
       <Footer />
       <CounselingFormComponent />

@@ -40,6 +40,9 @@ import CareerAssistance from "@/components/ui/career-assistance";
 import hiringPartnersImg from "@/assets/hiring-partners.png";
 import WhyOnlineProgramsSection from "@/components/ui/why-online-programs-section";
 import amityLmsImg from "@/assets/lms/amity.png";
+import SeoBreadcrumbs from "@/components/ui/seo-breadcrumbs";
+import RelatedContentSection from "@/components/ui/related-content-section";
+import EeatBlock from "@/components/ui/eeat-block";
 
 // Updated specializationIcons mapping to use Lucide-React icons
 const specializationIcons = {
@@ -90,6 +93,7 @@ const AmityCoursePage = () => {
         canonical={`https://avedu.in/university/amity/courses/${course.id}`}
       />
       <NavigationHeader />
+      <SeoBreadcrumbs />
 
       {/* Header Section */}
       <section className="bg-gradient-to-br from-primary/10 via-background to-primary/5 py-16">
@@ -356,6 +360,10 @@ const AmityCoursePage = () => {
           </div>
         </section>
       </div>
+
+      <RelatedContentSection />
+
+      <EeatBlock />
 
       <Footer />
     </div>
