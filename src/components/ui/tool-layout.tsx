@@ -16,8 +16,8 @@ interface ToolLayoutProps {
 const ToolLayout = ({ h1, intro, children, lastUpdated = "2026-08-01" }: ToolLayoutProps) => (
   <div className="min-h-screen bg-background">
     <NavigationHeader />
+    <SeoBreadcrumbs />
     <main className="container mx-auto px-4 py-6 md:py-10">
-      <SeoBreadcrumbs />
       <header className="mb-6 md:mb-8 max-w-3xl">
         <h1 className="text-2xl md:text-4xl font-bold mb-2">{h1}</h1>
         <p className="text-sm md:text-base text-muted-foreground">{intro}</p>
