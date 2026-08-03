@@ -84,6 +84,19 @@ import OnlineCoursesAdmissionProcess from "./pages/authority/OnlineCoursesAdmiss
 import ScholarshipsPage from "./pages/authority/Scholarships";
 import UniversityVsPage from "./pages/comparison/UniversityVsPage";
 
+// Phase 3 — student tools
+import UniversityFinder from "./pages/tools/UniversityFinder";
+import CourseFinder from "./pages/tools/CourseFinder";
+import FeeCalculator from "./pages/tools/FeeCalculator";
+import EligibilityChecker from "./pages/tools/EligibilityChecker";
+import AdmissionCalendar from "./pages/tools/AdmissionCalendar";
+import SearchPage from "./pages/Search";
+import Dashboard from "./pages/Dashboard";
+import MobileStickyCTA from "@/components/ui/mobile-sticky-cta";
+import { recordActivity } from "@/hooks/use-student-activity";
+import { getSeoRoute, normalisePath } from "@/data/seo/seo-routes";
+import { getBreadcrumbs } from "@/lib/seo/internal-links";
+
 // Component to scroll to top on route change
 const ScrollToTop = () => {
   const location = useLocation();
@@ -93,6 +106,21 @@ const ScrollToTop = () => {
       window.scrollTo(0, 0);
     }
   }, [location.pathname]);
+
+  return null;
+};
+
+/** Records every page view into the local "recently viewed" store. */
+const ActivityTracker = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    const path = normalisePath(pathname);
+    if (path === "/" || path.startsWith("/dashboard") || path.startsWith("/search")) return;
+    const crumbs = getBreadcrumbs(path);
+    const title = getSeoRoute(path)?.h1 ?? crumbs[crumbs.length - 1]?.name;
+    if (title) recordActivity("recent", { path, title });
+  }, [pathname]);
 
   return null;
 };
@@ -108,6 +136,7 @@ const App = () => {
       <Toaster />
       <Sonner />
       <ScrollToTop />
+      <ActivityTracker />
       {!location.pathname.includes('/courses/mba') && <GlobalIntelligentPopup />}
         <Routes>
           <Route path="/" element={<Index />} />
