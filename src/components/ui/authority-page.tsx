@@ -209,8 +209,11 @@ const AuthorityPage: React.FC<AuthorityPageProps> = ({
         </div>
       </section>
 
+      <EeatBlock />
+      <RelatedContentSection />
       <Footer />
       <CounselingFormComponent />
+
     </div>
   );
 };
