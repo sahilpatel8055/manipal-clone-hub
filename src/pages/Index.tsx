@@ -32,6 +32,9 @@ import amityLogo from "@/assets/amity-logo.jpg";
 import lpuLogo from "@/assets/lpu-logo.jpg";
 import smuLogo from "@/assets/smu-logo.jpg";
 import uttaranchalLogo from "@/assets/uttaranchal-logo.png";
+import SeoBreadcrumbs from "@/components/ui/seo-breadcrumbs";
+import RelatedContentSection from "@/components/ui/related-content-section";
+import EeatBlock from "@/components/ui/eeat-block";
 
 const Index = () => {
   const { openForm, CounselingFormComponent } = useCounselingForm();
@@ -161,6 +164,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <NavigationHeader />
+      <SeoBreadcrumbs />
       
       {/* 1st Section - Hero with FlipWords */}
       <section className="relative bg-gradient-subtle py-4 sm:py-6 lg:py-8 overflow-hidden">
@@ -292,6 +296,10 @@ const Index = () => {
 
       {/* 7th Section - Counselling */}
       <CounsellingSection onOpenCounseling={openForm} />
+      
+      <RelatedContentSection />
+      
+      <EeatBlock />
       
       <Footer />
       <CounselingFormComponent />

@@ -2,11 +2,15 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import NavigationHeader from "@/components/ui/navigation-header";
 import Footer from "@/components/ui/footer";
+import SeoBreadcrumbs from "@/components/ui/seo-breadcrumbs";
+import RelatedContentSection from "@/components/ui/related-content-section";
+import EeatBlock from "@/components/ui/eeat-block";
 
 const PrivacyPolicy = () => {
   return (
     <div className="min-h-screen bg-background">
       <NavigationHeader />
+      <SeoBreadcrumbs />
       <div className="container mx-auto px-4 py-8 max-w-4xl">
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold text-foreground mb-4">Privacy Policy</h1>
@@ -224,6 +228,8 @@ const PrivacyPolicy = () => {
           </CardContent>
         </Card>
       </div>
+      <RelatedContentSection />
+      <EeatBlock />
       <Footer />
     </div>
   );

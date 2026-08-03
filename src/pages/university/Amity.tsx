@@ -37,6 +37,9 @@ import amityDegree from "@/assets/amity.png";
 import UniversityComparisonTool from "@/components/ui/university-comparison-tool";
 import RelevantBlogsSection from "@/components/ui/relevant-blogs-section";
 import AdmissionProcedureSection from "@/components/ui/admission-procedure-section";
+import SeoBreadcrumbs from "@/components/ui/seo-breadcrumbs";
+import RelatedContentSection from "@/components/ui/related-content-section";
+import EeatBlock from "@/components/ui/eeat-block";
 
 const Amity = () => {
   const { openForm, CounselingFormComponent } = useCounselingForm();
@@ -90,6 +93,7 @@ const Amity = () => {
         canonical="https://avedu.in/university/amity"
       />
       <NavigationHeader />
+      <SeoBreadcrumbs />
       
       {/* Hero Section with Integrated Slideshow */}
       <section className="bg-gradient-to-br from-primary/10 via-background to-primary/5 py-6" id="top">
@@ -370,6 +374,10 @@ const Amity = () => {
           </div>
         </div>
       </section>
+
+      <RelatedContentSection />
+
+      <EeatBlock />
 
       <Footer />
       <CounselingFormComponent />

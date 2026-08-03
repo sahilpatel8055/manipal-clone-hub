@@ -34,6 +34,9 @@ import baImg from "@/assets/course/ba.jpg";
 import mangalayatanDegree from "@/assets/magalyatan.png";
 import UniversityComparisonTool from "@/components/ui/university-comparison-tool";
 import RelevantBlogsSection from "@/components/ui/relevant-blogs-section";
+import SeoBreadcrumbs from "@/components/ui/seo-breadcrumbs";
+import RelatedContentSection from "@/components/ui/related-content-section";
+import EeatBlock from "@/components/ui/eeat-block";
 
 const Mangalyatan = () => {
   const { openForm, CounselingFormComponent } = useCounselingForm();
@@ -80,6 +83,7 @@ const Mangalyatan = () => {
   return (
     <div className="min-h-screen bg-background">
       <NavigationHeader />
+      <SeoBreadcrumbs />
       
       {/* Hero Section with Integrated Slideshow */}
       <section className="bg-gradient-to-br from-primary/10 via-background to-primary/5 py-6" id="top">
@@ -274,6 +278,10 @@ const Mangalyatan = () => {
           </div>
         </div>
       </section>
+
+      <RelatedContentSection />
+
+      <EeatBlock />
 
       <Footer />
       <CounselingFormComponent />

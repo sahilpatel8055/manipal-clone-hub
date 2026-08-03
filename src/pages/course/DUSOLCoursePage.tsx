@@ -10,6 +10,9 @@ import SectionNavigation from "@/components/ui/section-navigation";
 import { useCounselingForm } from "@/hooks/use-counseling-form";
 import courseData from "@/data/courseData.json";
 import duSolDegree from "@/assets/DU sol sample degree.jpg";
+import SeoBreadcrumbs from "@/components/ui/seo-breadcrumbs";
+import RelatedContentSection from "@/components/ui/related-content-section";
+import EeatBlock from "@/components/ui/eeat-block";
 
 const DUSOLCoursePage = () => {
   const { courseId } = useParams();
@@ -34,6 +37,7 @@ const DUSOLCoursePage = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <NavigationHeader />
+      <SeoBreadcrumbs />
       <SectionNavigation sections={sections} />
 
       <section id="hero" className="bg-gradient-to-r from-blue-600 to-indigo-600 py-16 text-white">
@@ -133,6 +137,10 @@ const DUSOLCoursePage = () => {
           </div>
         </section>
       )}
+
+      <RelatedContentSection />
+
+      <EeatBlock />
 
       <Footer />
       <CounselingFormComponent />

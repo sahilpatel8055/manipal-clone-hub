@@ -121,20 +121,65 @@ export const getInternalLinks = (
   return capped;
 };
 
-/** Breadcrumb trail for a path: Home > Cluster hub > Page. */
+const prettify = (segment: string): string =>
+  segment
+    .replace(/-vs-/g, " vs ")
+    .split("-")
+    .map((w) =>
+      ["mba", "mca", "bba", "bca", "ma", "bcom", "mcom", "ba", "smu", "muj", "lpu", "vgu", "ignou", "du", "sol", "emi"].includes(
+        w.toLowerCase(),
+      )
+        ? w.toUpperCase()
+        : w.charAt(0).toUpperCase() + w.slice(1),
+    )
+    .join(" ");
+
+/**
+ * Breadcrumb trail for a path.
+ * Registry pages: Home > Cluster hub > Page.
+ * Dynamic/unregistered pages (e.g. /university/manipal/courses/online-mba):
+ * one crumb per URL segment, using registry H1s where they exist.
+ */
 export const getBreadcrumbs = (
   rawPath: string,
 ): { name: string; path: string }[] => {
   const path = normalisePath(rawPath);
-  const route = getSeoRoute(path);
   const crumbs = [{ name: "Home", path: "/" }];
-  if (!route || route.path === "/") return crumbs;
+  if (path === "/") return crumbs;
 
-  const hubPath = CLUSTER_HUB[route.cluster];
-  const hub = byPath(hubPath);
-  if (hub && hub.path !== route.path) {
-    crumbs.push({ name: hub.h1, path: hub.path });
+  const route = getSeoRoute(path);
+
+  if (route) {
+    const hub = byPath(CLUSTER_HUB[route.cluster]);
+    if (hub && hub.path !== route.path) {
+      crumbs.push({ name: hub.h1, path: hub.path });
+    }
+    crumbs.push({ name: route.h1, path: route.path });
+    return crumbs;
   }
-  crumbs.push({ name: route.h1, path: route.path });
+
+  // Fallback: build the trail from URL segments so no page is left without
+  // breadcrumbs (dynamic university-course and comparison routes).
+  const segments = path.split("/").filter(Boolean);
+  let acc = "";
+  segments.forEach((segment, i) => {
+    acc += `/${segment}`;
+    const known = byPath(acc);
+    const isLast = i === segments.length - 1;
+    // Skip structural-only segments that are not real pages.
+    if (!known && !isLast && (segment === "courses" || segment === "compare")) {
+      const hubMatch = byPath(`/${segment}`);
+      if (hubMatch) crumbs.push({ name: hubMatch.h1, path: hubMatch.path });
+      return;
+    }
+    if (!known && segment === "university") {
+      const hub = byPath("/universities");
+      if (hub) crumbs.push({ name: hub.h1, path: hub.path });
+      return;
+    }
+    crumbs.push({ name: known?.h1 ?? prettify(segment), path: acc });
+  });
+
   return crumbs;
 };
+

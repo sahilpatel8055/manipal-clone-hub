@@ -17,6 +17,9 @@ import mcaImg from "@/assets/course/mca.jpg";
 import bcaImg from "@/assets/course/bca.jpg";
 import baImg from "@/assets/course/ba.jpg";
 import bcomImg from "@/assets/course/bcom.jpg";
+import SeoBreadcrumbs from "@/components/ui/seo-breadcrumbs";
+import RelatedContentSection from "@/components/ui/related-content-section";
+import EeatBlock from "@/components/ui/eeat-block";
 
 const Courses = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -182,6 +185,7 @@ const Courses = () => {
         structuredData={structuredData}
       />
       <NavigationHeader />
+      <SeoBreadcrumbs />
       
       {/* Hero Section */}
       <section className="bg-gradient-subtle py-16">
@@ -410,6 +414,10 @@ const Courses = () => {
           </div>
         </div>
       </section>
+
+      <RelatedContentSection />
+
+      <EeatBlock />
 
       <Footer />
     </div>

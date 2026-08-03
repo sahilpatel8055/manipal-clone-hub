@@ -5,6 +5,8 @@ import NavigationHeader from "@/components/ui/navigation-header";
 import Footer from "@/components/ui/footer";
 import SEOHead from "@/components/ui/seo-head";
 import SEOInternalLinks from "@/components/ui/seo-internal-links";
+import RelatedContentSection from "@/components/ui/related-content-section";
+import EeatBlock from "@/components/ui/eeat-block";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -209,8 +211,11 @@ const AuthorityPage: React.FC<AuthorityPageProps> = ({
         </div>
       </section>
 
+      <EeatBlock />
+      <RelatedContentSection />
       <Footer />
       <CounselingFormComponent />
+
     </div>
   );
 };

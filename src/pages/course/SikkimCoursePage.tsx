@@ -38,6 +38,9 @@ import hiringPartnersImg from "@/assets/hiring-partners.png";
 import WhyOnlineProgramsSection from "@/components/ui/why-online-programs-section";
 import SectionNavigation from "@/components/ui/section-navigation";
 import sikkimLmsImg from "@/assets/lms/muj.png";
+import SeoBreadcrumbs from "@/components/ui/seo-breadcrumbs";
+import RelatedContentSection from "@/components/ui/related-content-section";
+import EeatBlock from "@/components/ui/eeat-block";
 
 // Updated specializationIcons mapping to use Lucide-React icons
 const specializationIcons = {
@@ -93,6 +96,7 @@ const SikkimCoursePage = () => {
   return (
     <div className="min-h-screen bg-background">
       <NavigationHeader />
+      <SeoBreadcrumbs />
       <SectionNavigation sections={sections} />
 
       {/* Header Section */}
@@ -359,6 +363,10 @@ const SikkimCoursePage = () => {
           </div>
         </section>
       </div>
+
+      <RelatedContentSection />
+
+      <EeatBlock />
 
       <Footer />
     </div>

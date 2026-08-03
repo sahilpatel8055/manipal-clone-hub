@@ -8,6 +8,9 @@ import NavigationHeader from "@/components/ui/navigation-header";
 import Footer from "@/components/ui/footer";
 import EmbeddedCounselingForm from "@/components/ui/embedded-counseling-form";
 import { ChevronLeft, ChevronRight, Star, Users, BookOpen, Clock, Award, CheckCircle } from "lucide-react";
+import SeoBreadcrumbs from "@/components/ui/seo-breadcrumbs";
+import RelatedContentSection from "@/components/ui/related-content-section";
+import EeatBlock from "@/components/ui/eeat-block";
 
 // Course data
 const courseData = {
@@ -319,6 +322,7 @@ const JainCoursePage = () => {
   return (
     <div className="min-h-screen bg-background font-inter">
       <NavigationHeader />
+      <SeoBreadcrumbs />
       
       {/* Hero Section */}
       <section className="pt-20 pb-16 bg-gradient-to-br from-primary/5 to-primary/10">
@@ -724,6 +728,10 @@ const JainCoursePage = () => {
           </div>
         </div>
       </section>
+
+      <RelatedContentSection />
+
+      <EeatBlock />
 
       <Footer />
     </div>
