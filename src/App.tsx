@@ -223,8 +223,19 @@ const App = () => {
           <Route path="/disclaimer" element={<Disclaimer />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-conditions" element={<TermsConditions />} />
+
+          {/* Phase 3 — student tools */}
+          <Route path="/tools/university-finder" element={<UniversityFinder />} />
+          <Route path="/tools/course-finder" element={<CourseFinder />} />
+          <Route path="/tools/fee-calculator" element={<FeeCalculator />} />
+          <Route path="/tools/eligibility-checker" element={<EligibilityChecker />} />
+          <Route path="/tools/admission-calendar" element={<AdmissionCalendar />} />
+          <Route path="/search" element={<SearchPage />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <MobileStickyCTA />
     </>
   );
 };

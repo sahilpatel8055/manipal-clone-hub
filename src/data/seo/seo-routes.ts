@@ -563,6 +563,84 @@ export const SEO_ROUTES: SeoRoute[] = [
     priority: "0.3",
     changefreq: "yearly",
   },
+
+  /* ---------------- Phase 3: student tools ---------------- */
+  {
+    path: "/tools/university-finder",
+    cluster: "resources",
+    h1: "Online University Finder",
+    title: "Online University Finder 2026 — Best-Fit UGC Universities | AVEDU",
+    description:
+      "Answer 8 questions on course, budget, state, placements, scholarship and EMI, and get the UGC-entitled online universities that match your profile.",
+    keywords: "university finder, best online university for me, online university recommendation",
+    priority: "0.8",
+    changefreq: "monthly",
+  },
+  {
+    path: "/tools/course-finder",
+    cluster: "resources",
+    h1: "Online Course Finder",
+    title: "Online Course Finder — Which Online Degree Should I Do? | AVEDU",
+    description:
+      "Choose between online MBA, MCA, BBA, BCA, BA, B.Com, MA and M.Com based on your qualification, career goal, salary target, industry and interest.",
+    keywords: "which online course is best, course finder, online degree recommendation",
+    priority: "0.8",
+    changefreq: "monthly",
+  },
+  {
+    path: "/tools/fee-calculator",
+    cluster: "fees",
+    h1: "Online Degree Fee, Scholarship & EMI Calculator",
+    title: "Online Degree Fee & EMI Calculator 2026 — Semester Cost | AVEDU",
+    description:
+      "Calculate total fee, scholarship discount, semester fee, yearly cost and monthly EMI for any online degree from India's top online universities.",
+    keywords: "online mba fee calculator, emi calculator online degree, semester fee",
+    priority: "0.8",
+    changefreq: "monthly",
+  },
+  {
+    path: "/tools/eligibility-checker",
+    cluster: "eligibility",
+    h1: "Online Degree Eligibility Checker",
+    title: "Online Degree Eligibility Checker 2026 — Am I Eligible? | AVEDU",
+    description:
+      "Enter your 10th, 12th, graduation marks and work experience to see which UGC-entitled online universities you are eligible for right now.",
+    keywords: "online mba eligibility check, am i eligible online degree, eligibility checker",
+    priority: "0.8",
+    changefreq: "monthly",
+  },
+  {
+    path: "/tools/admission-calendar",
+    cluster: "admission",
+    h1: "Online University Admission Calendar 2026",
+    title: "Online University Admission Calendar 2026 — Last Dates | AVEDU",
+    description:
+      "Admission open dates, last dates, scholarship deadlines, exam dates and result dates for every online university, searchable in one calendar.",
+    keywords: "online admission last date, admission calendar 2026, exam date online university",
+    priority: "0.8",
+    changefreq: "weekly",
+  },
+  {
+    path: "/search",
+    cluster: "resources",
+    h1: "Search Universities, Courses & Comparisons",
+    title: "Search AVEDU — Universities, Courses, Comparisons & Guides",
+    description:
+      "Search every online university, degree programme, comparison and admission guide on AVEDU with autocomplete and popular searches.",
+    priority: "0.5",
+    changefreq: "weekly",
+  },
+  {
+    path: "/dashboard",
+    cluster: "resources",
+    h1: "My AVEDU Dashboard",
+    title: "My Dashboard — Saved Universities & Comparisons | AVEDU",
+    description:
+      "Your recently viewed pages, saved universities, saved comparisons and requested brochures, stored privately in your browser.",
+    noSitemap: true,
+    priority: "0.3",
+    changefreq: "monthly",
+  },
 ];
 
 /** Redirect-only SEO shells: canonicalised to their destination, kept out of the sitemap. */
