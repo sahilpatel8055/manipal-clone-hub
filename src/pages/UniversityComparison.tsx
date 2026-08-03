@@ -6,6 +6,9 @@ import { Badge } from '@/components/ui/badge';
 import { Star, Phone, Video, MessageCircle, Download, MapPin, Calendar, GraduationCap, Users, DollarSign, Award } from 'lucide-react';
 import { toast } from '@/components/ui/use-toast';
 import SEOHead from '@/components/ui/seo-head';
+import SeoBreadcrumbs from '@/components/ui/seo-breadcrumbs';
+import RelatedContentSection from '@/components/ui/related-content-section';
+import EeatBlock from '@/components/ui/eeat-block';
 
 // Sample universities data - you can extend this
 const universitiesData = {
@@ -105,6 +108,8 @@ const UniversityComparison = () => {
         keywords="university comparison, online education, university fees, NAAC rating, online degrees"
       />
       
+      <SeoBreadcrumbs />
+
       <div className="min-h-screen bg-background py-8">
         <div className="container mx-auto px-4">
           <div className="text-center mb-8">
@@ -258,6 +263,9 @@ const UniversityComparison = () => {
           </div>
         )}
       </div>
+
+      <EeatBlock />
+      <RelatedContentSection />
     </>
   );
 };
