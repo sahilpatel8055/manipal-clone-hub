@@ -1,5 +1,6 @@
 import NavigationHeader from "@/components/ui/navigation-header";
 import Footer from "@/components/ui/footer";
+import CourseClusterSection from "@/components/ui/course-cluster-section";
 import SEOHead from "@/components/ui/seo-head";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -618,6 +619,7 @@ const OnlineMCOM = () => {
       </section>
 
       <RelevantBlogsSection pageType="course" />
+      <CourseClusterSection courseKey="mcom" />
       <RelatedContentSection />
       <EeatBlock />
       <Footer />
