@@ -1,5 +1,6 @@
 import NavigationHeader from "@/components/ui/navigation-header";
 import Footer from "@/components/ui/footer";
+import CourseClusterSection from "@/components/ui/course-cluster-section";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -789,6 +790,7 @@ const OnlineCommerce = () => {
           </div>
         </div>
       </section>
+      <CourseClusterSection courseKey="bcom" />
       <RelatedContentSection />
       <EeatBlock />
       <Footer />
