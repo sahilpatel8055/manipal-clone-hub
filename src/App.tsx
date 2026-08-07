@@ -1,7 +1,7 @@
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import GlobalIntelligentPopup from "@/components/ui/global-intelligent-popup";
 import SEOHead from "@/components/ui/seo-head";
@@ -55,27 +55,6 @@ import Blog from "./pages/Blog";
 import Courses from "./pages/Courses";
 import UniversityComparison from "./pages/UniversityComparison";
 
-// SEO redirect pages
-import IGNOUPage from "./pages/seo/IGNOUPage";
-import ManipalUniversityPage from "./pages/seo/ManipalUniversityPage";
-import UttaranchalOnlinePage from "./pages/seo/UttaranchalOnlinePage";
-import VGUOnlinePage from "./pages/seo/VGUOnlinePage";
-import AmityOnlinePage from "./pages/seo/AmityOnlinePage";
-import { 
-  ChandigarhUniversityOnlinePage,
-  JainUniversityOnlinePage,
-  LPUOnlinePage,
-  SikkimManipalOnlinePage,
-  DYPatilOnlinePage,
-  SymbiosisOnlineLearningPage
-} from "./pages/seo/UniversityOnlinePages";
-import { 
-  OnlineManipalPage,
-  AmityOnlineKeywordPage,
-  OnlineCUPage,
-  IGNOUDistancePage,
-  OnlineUUPage
-} from "./pages/seo/KeywordPages";
 import OnlineMBAAdmission from "./pages/authority/OnlineMBAAdmission";
 import OnlineMBAFees from "./pages/authority/OnlineMBAFees";
 import OnlineMBAEligibility from "./pages/authority/OnlineMBAEligibility";
@@ -95,6 +74,8 @@ import Dashboard from "./pages/Dashboard";
 import MobileStickyCTA from "@/components/ui/mobile-sticky-cta";
 import { recordActivity } from "@/hooks/use-student-activity";
 import { getSeoRoute, normalisePath } from "@/data/seo/seo-routes";
+import { LEGACY_URL_REDIRECTS } from "@/data/seo/university-urls";
+import LegacyCourseRedirect from "@/components/seo/legacy-course-redirect";
 import { getBreadcrumbs } from "@/lib/seo/internal-links";
 
 // Component to scroll to top on route change
@@ -144,25 +125,16 @@ const App = () => {
           <Route path="/courses" element={<Courses />} />
           <Route path="/universities" element={<Universities />} />
 
-          {/* SEO Routes */}
-          <Route path="/ignou" element={<IGNOUPage />} />
-          <Route path="/manipal-university" element={<ManipalUniversityPage />} />
-          <Route path="/uu" element={<UttaranchalOnlinePage />} />
-          <Route path="/vgu" element={<VGUOnlinePage />} />
-          <Route path="/amity-online" element={<AmityOnlinePage />} />
-          <Route path="/chandigarh-university-online" element={<ChandigarhUniversityOnlinePage />} />
-          <Route path="/jain-university-online" element={<JainUniversityOnlinePage />} />
-          <Route path="/lpu-online" element={<LPUOnlinePage />} />
-          <Route path="/sikkim-manipal-online" element={<SikkimManipalOnlinePage />} />
-          <Route path="/dy-patil-online" element={<DYPatilOnlinePage />} />
-          <Route path="/symbiosis-centre-for-online-learning" element={<SymbiosisOnlineLearningPage />} />
-
-          {/* Keyword SEO Routes */}
-          <Route path="/onlinemanipal" element={<OnlineManipalPage />} />
-          <Route path="/amityonline" element={<AmityOnlineKeywordPage />} />
-          <Route path="/onlinecu" element={<OnlineCUPage />} />
-          <Route path="/ignoudistance" element={<IGNOUDistancePage />} />
-          <Route path="/onlineuu" element={<OnlineUUPage />} />
+          {/* ---- Legacy URL consolidation (one keyword = one page) ----
+              Every historical duplicate redirects to its canonical URL. */}
+          {Object.entries(LEGACY_URL_REDIRECTS).map(([from, to]) => (
+            <Route key={from} path={from} element={<Navigate to={to} replace />} />
+          ))}
+          <Route
+            path="/university/manipal/courses/:courseId"
+            element={<LegacyCourseRedirect uni="manipal" />}
+          />
+          <Route path="/university/:slug/:courseId" element={<LegacyCourseRedirect />} />
 
           {/* Course Admission SEO Routes */}
           <Route path="/online-mba-admission" element={<OnlineMBAAdmission />} />
@@ -172,26 +144,17 @@ const App = () => {
           <Route path="/online-courses-admission-process" element={<OnlineCoursesAdmissionProcess />} />
           <Route path="/scholarships" element={<ScholarshipsPage />} />
 
-          {/* University-specific course SEO routes */}
-          <Route path="/ignou/online-mba" element={<IGNOU />} />
-          <Route path="/ignou/online-mca" element={<IGNOU />} />
-          <Route path="/manipal/online-mba" element={<Manipal />} />
-          <Route path="/manipal/online-bca" element={<Manipal />} />
-          <Route path="/amity/online-mba" element={<Amity />} />
-          <Route path="/lpu/online-bba" element={<LPU />} />
-          <Route path="/chandigarh-university/online-mcom" element={<Universities />} />
-
-          {/* University pages */}
-          <Route path="/university/ignou" element={<IGNOU />} />
-          <Route path="/university/manipal" element={<Manipal />} />
-          <Route path="/university/uttaranchal" element={<Uttaranchal />} />
-          <Route path="/university/vgu" element={<VGU />} />
-          <Route path="/university/smu" element={<Sikkim />} />
-          <Route path="/university/amity" element={<Amity />} />
-          <Route path="/university/lpu" element={<LPU />} />
-          <Route path="/university/mangalyatan" element={<Mangalyatan />} />
-          <Route path="/university/du-sol" element={<DUSOL />} />
-          <Route path="/university/jain" element={<JainUniversity />} />
+          {/* Canonical university pages: /universities/{slug}-online */}
+          <Route path="/universities/ignou-online" element={<IGNOU />} />
+          <Route path="/universities/manipal-online" element={<Manipal />} />
+          <Route path="/universities/uttaranchal-online" element={<Uttaranchal />} />
+          <Route path="/universities/vgu-online" element={<VGU />} />
+          <Route path="/universities/sikkim-manipal-online" element={<Sikkim />} />
+          <Route path="/universities/amity-online" element={<Amity />} />
+          <Route path="/universities/lpu-online" element={<LPU />} />
+          <Route path="/universities/mangalayatan-online" element={<Mangalyatan />} />
+          <Route path="/universities/du-sol-online" element={<DUSOL />} />
+          <Route path="/universities/jain-online" element={<JainUniversity />} />
 
           {/* Course category pages */}
           <Route path="/courses/mba" element={<OnlineMBA />} />
@@ -203,17 +166,17 @@ const App = () => {
           <Route path="/courses/bcom" element={<OnlineCommerce />} />
           <Route path="/courses/ba" element={<OnlineArts />} />
 
-          {/* Dynamic university course pages */}
+          {/* Canonical university course pages */}
           <Route path="/courses/:courseId" element={<CoursePage />} />
-          <Route path="/university/manipal/courses/:courseId" element={<ManipalCoursePage />} />
-          <Route path="/university/uttaranchal/:courseId" element={<UttaranchalCoursePage />} />
-          <Route path="/university/vgu/:courseId" element={<VguCoursePage />} />
-          <Route path="/university/sikkim/:courseId" element={<SikkimCoursePage />} />
-          <Route path="/university/amity/:courseId" element={<AmityCoursePage />} />
-          <Route path="/university/lpu/:courseId" element={<LPUCoursePage />} />
-          <Route path="/university/mangalyatan/:courseId" element={<MangalayatanCoursePage />} />
-          <Route path="/university/du-sol/:courseId" element={<DUSOLCoursePage />} />
-          <Route path="/university/jain/:courseId" element={<JainCoursePage />} />
+          <Route path="/universities/manipal-online/courses/:courseId" element={<ManipalCoursePage />} />
+          <Route path="/universities/uttaranchal-online/courses/:courseId" element={<UttaranchalCoursePage />} />
+          <Route path="/universities/vgu-online/courses/:courseId" element={<VguCoursePage />} />
+          <Route path="/universities/sikkim-manipal-online/courses/:courseId" element={<SikkimCoursePage />} />
+          <Route path="/universities/amity-online/courses/:courseId" element={<AmityCoursePage />} />
+          <Route path="/universities/lpu-online/courses/:courseId" element={<LPUCoursePage />} />
+          <Route path="/universities/mangalayatan-online/courses/:courseId" element={<MangalayatanCoursePage />} />
+          <Route path="/universities/du-sol-online/courses/:courseId" element={<DUSOLCoursePage />} />
+          <Route path="/universities/jain-online/courses/:courseId" element={<JainCoursePage />} />
 
           {/* University Comparison Page */}
           <Route path="/comparison" element={<UniversityComparison />} />
