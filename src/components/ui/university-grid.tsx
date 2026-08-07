@@ -14,6 +14,7 @@ import amityLogo from "@/assets/amity-logo.jpg";
 import lpuLogo from "@/assets/lpu-logo.jpg";
 import mangalayatanLogo from "@/assets/mangalyatan-logo.png";
 import duSolLogo from "@/assets/uni_logo/DU_SOL.png";
+import { universityPath } from "@/data/seo/university-urls";
 
 interface University {
   id: string;
@@ -349,7 +350,7 @@ const UniversityCard = ({ university, onOpenCounseling }: { university: Universi
 
       <CardFooter className="pt-0">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-1 sm:gap-1.5 w-full">
-          <Link to={`/university/${university.id}`}>
+          <Link to={universityPath(university.id)}>
             <Button variant="outline" size="sm" className="gap-0.5 w-full text-[0.65rem] py-1 sm:py-1.5 h-auto bg-primary text-primary-foreground hover:bg-primary/90">
               <GraduationCap className="h-2.5 w-2.5 sm:h-3 w-3" />
               View Courses

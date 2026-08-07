@@ -2,6 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { ArrowRight, BookOpen, Building, GraduationCap } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { getInternalLinks } from "@/lib/seo/internal-links";
+import { universityPath } from "@/data/seo/university-urls";
 
 interface SEOInternalLinksProps {
   pageType: "university" | "course" | "blog" | "hub";
@@ -44,7 +45,7 @@ const SEOInternalLinks: React.FC<SEOInternalLinksProps> = ({
         return [
           {
             title: universityName ? `Back to ${universityName} Hub` : "University Hub",
-            url: universityName ? `/university/${universityName.toLowerCase().replace(/\s+/g, '-')}` : "/universities",
+            url: universityName ? universityPath(universityName.toLowerCase().replace(/\s+/g, '-')) : "/universities",
             description: "Explore all programs and university details"
           },
           {
