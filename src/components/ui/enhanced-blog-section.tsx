@@ -27,8 +27,8 @@ const blogPosts: BlogPost[] = [
     readTime: "8 min read",
     publishDate: "2024-01-15",
     internalLinks: [
-      { text: "Manipal University Details", url: "/university/manipal", type: "university" },
-      { text: "Online MBA Course", url: "/university/manipal/courses/online-mba", type: "course" },
+      { text: "Manipal University Details", url: "/universities/manipal-online", type: "university" },
+      { text: "Online MBA Course", url: "/universities/manipal-online/courses/online-mba", type: "course" },
       { text: "Compare MBA Programs", url: "/courses/online-mba", type: "general" }
     ],
     keywords: ["Manipal MBA", "online MBA fees", "MBA placement", "distance MBA"]
@@ -54,8 +54,8 @@ const blogPosts: BlogPost[] = [
     readTime: "10 min read",
     publishDate: "2024-01-08",
     internalLinks: [
-      { text: "Amity University Programs", url: "/university/amity", type: "university" },
-      { text: "Amity BCA Course", url: "/university/amity/courses/online-bca", type: "course" }
+      { text: "Amity University Programs", url: "/universities/amity-online", type: "university" },
+      { text: "Amity BCA Course", url: "/universities/amity-online/courses/online-bca", type: "course" }
     ],
     keywords: ["Amity online", "university review", "online programs", "student experience"]
   },
@@ -68,9 +68,9 @@ const blogPosts: BlogPost[] = [
     publishDate: "2024-01-05",
     internalLinks: [
       { text: "View All Universities", url: "/universities", type: "general" },
-      { text: "Manipal University", url: "/university/manipal", type: "university" },
-      { text: "LPU Online", url: "/university/lpu", type: "university" },
-      { text: "VGU Programs", url: "/university/vgu", type: "university" }
+      { text: "Manipal University", url: "/universities/manipal-online", type: "university" },
+      { text: "LPU Online", url: "/universities/lpu-online", type: "university" },
+      { text: "VGU Programs", url: "/universities/vgu-online", type: "university" }
     ],
     keywords: ["best online universities", "UGC approved", "distance education ranking", "online degree"]
   },
@@ -83,8 +83,8 @@ const blogPosts: BlogPost[] = [
     publishDate: "2024-01-03",
     internalLinks: [
       { text: "MBA Programs", url: "/courses/online-mba", type: "general" },
-      { text: "Manipal MBA", url: "/university/manipal/courses/online-mba", type: "course" },
-      { text: "Amity MBA", url: "/university/amity/courses/online-mba", type: "course" }
+      { text: "Manipal MBA", url: "/universities/manipal-online/courses/online-mba", type: "course" },
+      { text: "Amity MBA", url: "/universities/amity-online/courses/online-mba", type: "course" }
     ],
     keywords: ["MBA placement", "online MBA salary", "career opportunities", "job prospects"]
   },

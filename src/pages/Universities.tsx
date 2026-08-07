@@ -12,6 +12,7 @@ import { useCounselingForm } from "@/hooks/use-counseling-form";
 import SeoBreadcrumbs from "@/components/ui/seo-breadcrumbs";
 import RelatedContentSection from "@/components/ui/related-content-section";
 import EeatBlock from "@/components/ui/eeat-block";
+import { universityPath } from "@/data/seo/university-urls";
 
 const UniversityCard = ({ university, onOpenCounseling }: { university: any, onOpenCounseling?: () => void }) => {
   return (
@@ -72,7 +73,7 @@ const UniversityCard = ({ university, onOpenCounseling }: { university: any, onO
 
       <CardFooter className="pt-0">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-1 sm:gap-1.5 w-full">
-          <Link to={`/university/${university.id}`}>
+          <Link to={universityPath(university.id)}>
             <Button variant="outline" size="sm" className="gap-0.5 w-full text-[0.65rem] py-1 sm:py-1.5 h-auto">
               <GraduationCap className="h-2.5 w-2.5 sm:h-3 w-3" />
               View Courses

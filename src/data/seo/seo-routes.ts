@@ -9,6 +9,7 @@
  */
 
 import { COMPARE_PAIRS } from "@/data/comparison-universities";
+import { LEGACY_URL_REDIRECTS } from "@/data/seo/university-urls";
 
 export const SITE_URL = "https://avedu.in";
 export const SITE_NAME = "AVEDU";
@@ -121,7 +122,7 @@ export const SEO_ROUTES: SeoRoute[] = [
     changefreq: "weekly",
   },
   {
-    path: "/university/ignou",
+    path: "/universities/ignou-online",
     cluster: "universities",
     university: "ignou",
     h1: "IGNOU Online & Distance Education",
@@ -133,7 +134,7 @@ export const SEO_ROUTES: SeoRoute[] = [
     changefreq: "weekly",
   },
   {
-    path: "/university/manipal",
+    path: "/universities/manipal-online",
     cluster: "universities",
     university: "manipal",
     h1: "Manipal University Online (MUJ)",
@@ -145,7 +146,7 @@ export const SEO_ROUTES: SeoRoute[] = [
     changefreq: "weekly",
   },
   {
-    path: "/university/amity",
+    path: "/universities/amity-online",
     cluster: "universities",
     university: "amity",
     h1: "Amity University Online",
@@ -157,7 +158,7 @@ export const SEO_ROUTES: SeoRoute[] = [
     changefreq: "weekly",
   },
   {
-    path: "/university/lpu",
+    path: "/universities/lpu-online",
     cluster: "universities",
     university: "lpu",
     h1: "LPU Online (Lovely Professional University)",
@@ -169,7 +170,7 @@ export const SEO_ROUTES: SeoRoute[] = [
     changefreq: "weekly",
   },
   {
-    path: "/university/uttaranchal",
+    path: "/universities/uttaranchal-online",
     cluster: "universities",
     university: "uttaranchal",
     h1: "Uttaranchal University Online",
@@ -181,7 +182,7 @@ export const SEO_ROUTES: SeoRoute[] = [
     changefreq: "weekly",
   },
   {
-    path: "/university/vgu",
+    path: "/universities/vgu-online",
     cluster: "universities",
     university: "vgu",
     h1: "Vivekananda Global University Online",
@@ -193,7 +194,7 @@ export const SEO_ROUTES: SeoRoute[] = [
     changefreq: "weekly",
   },
   {
-    path: "/university/smu",
+    path: "/universities/sikkim-manipal-online",
     cluster: "universities",
     university: "sikkim",
     h1: "Sikkim Manipal University Distance & Online",
@@ -205,7 +206,7 @@ export const SEO_ROUTES: SeoRoute[] = [
     changefreq: "weekly",
   },
   {
-    path: "/university/mangalyatan",
+    path: "/universities/mangalayatan-online",
     cluster: "universities",
     university: "mangalyatan",
     h1: "Mangalayatan University Online",
@@ -217,7 +218,7 @@ export const SEO_ROUTES: SeoRoute[] = [
     changefreq: "weekly",
   },
   {
-    path: "/university/du-sol",
+    path: "/universities/du-sol-online",
     cluster: "universities",
     university: "du-sol",
     h1: "DU SOL — School of Open Learning, Delhi University",
@@ -229,7 +230,7 @@ export const SEO_ROUTES: SeoRoute[] = [
     changefreq: "weekly",
   },
   {
-    path: "/university/jain",
+    path: "/universities/jain-online",
     cluster: "universities",
     university: "jain",
     h1: "Jain University Online (JAIN Deemed-to-be University)",
@@ -348,92 +349,6 @@ export const SEO_ROUTES: SeoRoute[] = [
     keywords: "online ba, ba online degree, online ba admission",
     priority: "0.8",
     changefreq: "weekly",
-  },
-
-  /* ------- University × course landing routes (SEO entry points) ------- */
-  {
-    path: "/ignou/online-mba",
-    cluster: "courses",
-    university: "ignou",
-    course: "mba",
-    h1: "IGNOU Online MBA",
-    title: "IGNOU Online MBA 2026 — Fees, Eligibility, Admission | AVEDU",
-    description:
-      "IGNOU Online MBA: fee structure, eligibility, entrance requirement, specialisations, duration and the complete admission process for 2026.",
-    priority: "0.7",
-    changefreq: "monthly",
-  },
-  {
-    path: "/ignou/online-mca",
-    cluster: "courses",
-    university: "ignou",
-    course: "mca",
-    h1: "IGNOU Online MCA",
-    title: "IGNOU Online MCA 2026 — Fees, Syllabus, Eligibility | AVEDU",
-    description:
-      "IGNOU Online MCA programme details: eligibility, semester syllabus, fees, duration, exam pattern and how to apply for the current session.",
-    priority: "0.7",
-    changefreq: "monthly",
-  },
-  {
-    path: "/manipal/online-mba",
-    cluster: "courses",
-    university: "manipal",
-    course: "mba",
-    h1: "Online Manipal MBA",
-    title: "Manipal Online MBA 2026 — Fees, Specialisations | AVEDU",
-    description:
-      "Online Manipal MBA: NAAC A+ university, specialisation list, semester fees with EMI, eligibility, placement support and admission dates.",
-    priority: "0.7",
-    changefreq: "monthly",
-  },
-  {
-    path: "/manipal/online-bca",
-    cluster: "courses",
-    university: "manipal",
-    course: "bca",
-    h1: "Online Manipal BCA",
-    title: "Manipal Online BCA 2026 — Fees, Syllabus, Admission | AVEDU",
-    description:
-      "Online Manipal BCA programme: three-year syllabus, fees and EMI plans, eligibility after 12th, LMS features and placement assistance.",
-    priority: "0.7",
-    changefreq: "monthly",
-  },
-  {
-    path: "/amity/online-mba",
-    cluster: "courses",
-    university: "amity",
-    course: "mba",
-    h1: "Amity Online MBA",
-    title: "Amity Online MBA 2026 — Fees, Specialisations, Reviews | AVEDU",
-    description:
-      "Amity Online MBA: specialisations, total fees and EMI, eligibility, accreditation, alumni network and step-by-step admission process.",
-    priority: "0.7",
-    changefreq: "monthly",
-  },
-  {
-    path: "/lpu/online-bba",
-    cluster: "courses",
-    university: "lpu",
-    course: "bba",
-    h1: "LPU Online BBA",
-    title: "LPU Online BBA 2026 — Fees, Eligibility, Placements | AVEDU",
-    description:
-      "LPU Online BBA: NAAC A++ university, fee structure with scholarships, eligibility after 12th, curriculum and placement support.",
-    priority: "0.7",
-    changefreq: "monthly",
-  },
-  {
-    path: "/chandigarh-university/online-mcom",
-    cluster: "courses",
-    university: "chandigarh",
-    course: "mcom",
-    h1: "Chandigarh University Online MCom",
-    title: "Chandigarh University Online MCom 2026 — Fees | AVEDU",
-    description:
-      "Chandigarh University Online MCom: eligibility, subjects, semester fees, duration and admission guidance from AVEDU counsellors.",
-    priority: "0.7",
-    changefreq: "monthly",
   },
 
   /* ---------------- Admission / fees / eligibility clusters ---------------- */
@@ -643,25 +558,12 @@ export const SEO_ROUTES: SeoRoute[] = [
   },
 ];
 
-/** Redirect-only SEO shells: canonicalised to their destination, kept out of the sitemap. */
-export const SEO_REDIRECTS: Record<string, string> = {
-  "/ignou": "/university/ignou",
-  "/manipal-university": "/university/manipal",
-  "/uu": "/university/uttaranchal",
-  "/vgu": "/university/vgu",
-  "/amity-online": "/university/amity",
-  "/chandigarh-university-online": "/universities",
-  "/jain-university-online": "/university/jain",
-  "/lpu-online": "/university/lpu",
-  "/sikkim-manipal-online": "/university/smu",
-  "/dy-patil-online": "/universities",
-  "/symbiosis-centre-for-online-learning": "/universities",
-  "/onlinemanipal": "/university/manipal",
-  "/amityonline": "/university/amity",
-  "/onlinecu": "/universities",
-  "/ignoudistance": "/university/ignou",
-  "/onlineuu": "/university/uttaranchal",
-};
+/**
+ * Legacy -> canonical redirect map (Phase 1).
+ * Sourced from the university URL map so there is a single source of truth.
+ * These paths are redirected in App.tsx and kept out of the sitemap.
+ */
+export const SEO_REDIRECTS: Record<string, string> = { ...LEGACY_URL_REDIRECTS };
 
 /* ---- Phase 2: auto-generated "X vs Y" comparison routes ---- */
 const COMPARISON_ROUTES: SeoRoute[] = COMPARE_PAIRS.map(({ slug, a, b }) => ({

@@ -237,7 +237,7 @@ const DUSOL = () => {
                       <Clock className="w-4 h-4 text-primary" />
                       <span>{course.duration}</span>
                     </div>
-                    <Link to={`/university/du-sol/${courseId}`}>
+                    <Link to={`/universities/du-sol-online/courses/${courseId}`}>
                       <Button className="w-full mt-4 bg-primary text-primary-foreground hover:bg-primary/90" variant="outline">
                         View Details
                       </Button>

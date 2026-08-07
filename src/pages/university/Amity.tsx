@@ -90,7 +90,7 @@ const Amity = () => {
         title="Amity University Online Programs | UGC Approved Distance Education | Apply Now"
         description="Join Amity University Online with 100+ programs, UGC-DEB approval, industry-aligned curriculum. Fees starting ₹60K. Expert faculty & placement support."
         keywords="Amity University online, Amity distance education, online MBA Amity, Amity online courses, UGC approved"
-        canonical="https://avedu.in/university/amity"
+        canonical="https://avedu.in/universities/amity-online"
       />
       <NavigationHeader />
       <SeoBreadcrumbs />
@@ -239,7 +239,7 @@ const Amity = () => {
                     <Award className="w-4 h-4 text-primary" />
                     <span>{course.specializations} Specializations</span>
                   </div>
-                  <Link to={`/university/amity/${course.id}`}>
+                  <Link to={`/universities/amity-online/courses/${course.id}`}>
                     <Button className="w-full mt-4 bg-primary text-primary-foreground hover:bg-primary/90" variant="outline">
                       View Details
                     </Button>

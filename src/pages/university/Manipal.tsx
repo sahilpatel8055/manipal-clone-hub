@@ -93,12 +93,12 @@ const Manipal = () => {
         title="Manipal University Online Programs | UGC Approved | 100% Placement Support"
         description="Join 50K+ students at Manipal University Online. NAAC A++ accredited, UGC-DEB approved programs including MBA, MCA, BBA, BCA. Fee starting ₹1.8L. Apply now!"
         keywords="Manipal University online, online MBA Manipal, Manipal University distance education, UGC approved online courses"
-        canonical="https://avedu.in/university/manipal"
+        canonical="https://avedu.in/universities/manipal-online"
         structuredData={{
           "@context": "https://schema.org",
           "@type": "EducationalOrganization",
           "name": "Manipal University Online",
-          "url": "https://avedu.in/university/manipal",
+          "url": "https://avedu.in/universities/manipal-online",
           "logo": "https://avedu.in/assets/manipal-logo.png",
           "description": "NAAC A++ accredited university offering online degree programs",
           "address": {
@@ -290,7 +290,7 @@ const Manipal = () => {
                     <Award className="w-4 h-4 text-primary" />
                     <span>{course.specializations} Specializations</span>
                   </div>
-                  <Link to={`/university/manipal/courses/${course.id}`}>
+                  <Link to={`/universities/manipal-online/courses/${course.id}`}>
                     <Button className="w-full mt-4 bg-primary text-primary-foreground hover:bg-primary/90" variant="outline">
                       View Details
                     </Button>
