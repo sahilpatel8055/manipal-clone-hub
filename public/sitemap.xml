@@ -106,41 +106,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://avedu.in/ignou/online-mba</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://avedu.in/ignou/online-mca</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://avedu.in/manipal/online-mba</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://avedu.in/manipal/online-bca</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://avedu.in/amity/online-mba</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://avedu.in/lpu/online-bba</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://avedu.in/chandigarh-university/online-mcom</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://avedu.in/online-courses-admission-process</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
