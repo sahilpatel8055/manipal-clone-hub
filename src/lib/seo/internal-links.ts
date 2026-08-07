@@ -137,7 +137,7 @@ const prettify = (segment: string): string =>
 /**
  * Breadcrumb trail for a path.
  * Registry pages: Home > Cluster hub > Page.
- * Dynamic/unregistered pages (e.g. /university/manipal/courses/online-mba):
+ * Dynamic/unregistered pages (e.g. /universities/manipal-online/courses/online-mba):
  * one crumb per URL segment, using registry H1s where they exist.
  */
 export const getBreadcrumbs = (

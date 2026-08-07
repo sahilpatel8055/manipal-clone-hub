@@ -102,7 +102,7 @@ const ManipalCoursePage = () => {
         title={`${course.name} Online - Manipal University | Fee ₹${course.feesBreakdown.fullFees} | 100% Placement`}
         description={`Study ${course.name} online from Manipal University. Total fee ${course.feesBreakdown.fullFees}, ${course.duration} duration, ${course.specializations.length} specializations. NAAC A++ accredited with placement assistance.`}
         keywords={`${course.name} online, Manipal University ${course.name}, online ${course.name} fees, ${course.name} placement, distance education`}
-        canonical={`https://avedu.in/university/manipal/courses/${course.id}`}
+        canonical={`https://avedu.in/universities/manipal-online/courses/${course.id}`}
         structuredData={{
           "@context": "https://schema.org",
           "@type": "Course",
@@ -384,7 +384,7 @@ const ManipalCoursePage = () => {
             <div className="bg-primary/5 p-6 rounded-lg mt-12">
               <h3 className="text-xl font-semibold text-foreground mb-4">Related Resources</h3>
               <div className="grid md:grid-cols-3 gap-4">
-                <Link to="/university/manipal" className="text-primary hover:underline font-medium">
+                <Link to="/universities/manipal-online" className="text-primary hover:underline font-medium">
                   ← Back to Manipal University Hub
                 </Link>
                 <Link to="/courses" className="text-primary hover:underline font-medium">

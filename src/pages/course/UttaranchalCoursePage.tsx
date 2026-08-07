@@ -48,7 +48,7 @@ const UttaranchalCoursePage = () => {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary/10 via-background to-primary/5 py-12" id="top">
         <div className="container mx-auto px-4">
-          <Link to="/university/uttaranchal" className="flex items-center text-primary hover:underline mb-6">
+          <Link to="/universities/uttaranchal-online" className="flex items-center text-primary hover:underline mb-6">
             <ChevronLeft className="w-4 h-4 mr-2" />
             Back to Uttaranchal University
           </Link>

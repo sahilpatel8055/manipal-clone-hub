@@ -121,7 +121,7 @@ export const SEO_ROUTES: SeoRoute[] = [
     changefreq: "weekly",
   },
   {
-    path: "/university/ignou",
+    path: "/universities/ignou-online",
     cluster: "universities",
     university: "ignou",
     h1: "IGNOU Online & Distance Education",
@@ -133,7 +133,7 @@ export const SEO_ROUTES: SeoRoute[] = [
     changefreq: "weekly",
   },
   {
-    path: "/university/manipal",
+    path: "/universities/manipal-online",
     cluster: "universities",
     university: "manipal",
     h1: "Manipal University Online (MUJ)",
@@ -145,7 +145,7 @@ export const SEO_ROUTES: SeoRoute[] = [
     changefreq: "weekly",
   },
   {
-    path: "/university/amity",
+    path: "/universities/amity-online",
     cluster: "universities",
     university: "amity",
     h1: "Amity University Online",
@@ -157,7 +157,7 @@ export const SEO_ROUTES: SeoRoute[] = [
     changefreq: "weekly",
   },
   {
-    path: "/university/lpu",
+    path: "/universities/lpu-online",
     cluster: "universities",
     university: "lpu",
     h1: "LPU Online (Lovely Professional University)",
@@ -169,7 +169,7 @@ export const SEO_ROUTES: SeoRoute[] = [
     changefreq: "weekly",
   },
   {
-    path: "/university/uttaranchal",
+    path: "/universities/uttaranchal-online",
     cluster: "universities",
     university: "uttaranchal",
     h1: "Uttaranchal University Online",
@@ -181,7 +181,7 @@ export const SEO_ROUTES: SeoRoute[] = [
     changefreq: "weekly",
   },
   {
-    path: "/university/vgu",
+    path: "/universities/vgu-online",
     cluster: "universities",
     university: "vgu",
     h1: "Vivekananda Global University Online",
@@ -193,7 +193,7 @@ export const SEO_ROUTES: SeoRoute[] = [
     changefreq: "weekly",
   },
   {
-    path: "/university/smu",
+    path: "/universities/sikkim-manipal-online",
     cluster: "universities",
     university: "sikkim",
     h1: "Sikkim Manipal University Distance & Online",
@@ -205,7 +205,7 @@ export const SEO_ROUTES: SeoRoute[] = [
     changefreq: "weekly",
   },
   {
-    path: "/university/mangalyatan",
+    path: "/universities/mangalayatan-online",
     cluster: "universities",
     university: "mangalyatan",
     h1: "Mangalayatan University Online",
@@ -217,7 +217,7 @@ export const SEO_ROUTES: SeoRoute[] = [
     changefreq: "weekly",
   },
   {
-    path: "/university/du-sol",
+    path: "/universities/du-sol-online",
     cluster: "universities",
     university: "du-sol",
     h1: "DU SOL — School of Open Learning, Delhi University",
@@ -229,7 +229,7 @@ export const SEO_ROUTES: SeoRoute[] = [
     changefreq: "weekly",
   },
   {
-    path: "/university/jain",
+    path: "/universities/jain-online",
     cluster: "universities",
     university: "jain",
     h1: "Jain University Online (JAIN Deemed-to-be University)",
@@ -645,22 +645,22 @@ export const SEO_ROUTES: SeoRoute[] = [
 
 /** Redirect-only SEO shells: canonicalised to their destination, kept out of the sitemap. */
 export const SEO_REDIRECTS: Record<string, string> = {
-  "/ignou": "/university/ignou",
-  "/manipal-university": "/university/manipal",
-  "/uu": "/university/uttaranchal",
-  "/vgu": "/university/vgu",
-  "/amity-online": "/university/amity",
+  "/ignou": "/universities/ignou-online",
+  "/manipal-university": "/universities/manipal-online",
+  "/uu": "/universities/uttaranchal-online",
+  "/vgu": "/universities/vgu-online",
+  "/amity-online": "/universities/amity-online",
   "/chandigarh-university-online": "/universities",
-  "/jain-university-online": "/university/jain",
-  "/lpu-online": "/university/lpu",
-  "/sikkim-manipal-online": "/university/smu",
+  "/jain-university-online": "/universities/jain-online",
+  "/lpu-online": "/universities/lpu-online",
+  "/sikkim-manipal-online": "/universities/sikkim-manipal-online",
   "/dy-patil-online": "/universities",
   "/symbiosis-centre-for-online-learning": "/universities",
-  "/onlinemanipal": "/university/manipal",
-  "/amityonline": "/university/amity",
+  "/onlinemanipal": "/universities/manipal-online",
+  "/amityonline": "/universities/amity-online",
   "/onlinecu": "/universities",
-  "/ignoudistance": "/university/ignou",
-  "/onlineuu": "/university/uttaranchal",
+  "/ignoudistance": "/universities/ignou-online",
+  "/onlineuu": "/universities/uttaranchal-online",
 };
 
 /* ---- Phase 2: auto-generated "X vs Y" comparison routes ---- */

@@ -327,7 +327,7 @@ const OnlineMCA = () => {
       emiOption: "₹10,000/month",
       registrationFee: "₹5,000",
       rating: 4.6,
-      coursePagePath: "/university/manipal/online-mca"
+      coursePagePath: "/universities/manipal-online/courses/online-mca"
     },
     {
       name: "Uttaranchal University",
@@ -337,7 +337,7 @@ const OnlineMCA = () => {
       emiOption: "₹5,833/month",
       registrationFee: "₹3,000",
       rating: 4.5,
-      coursePagePath: "/university/uttaranchal/online-mca"
+      coursePagePath: "/universities/uttaranchal-online/courses/online-mca"
     },
     {
       name: "Vivekananda Global University",
@@ -347,7 +347,7 @@ const OnlineMCA = () => {
       emiOption: "₹5,000/month",
       registrationFee: "₹2,500",
       rating: 4.4,
-      coursePagePath: "/university/vgu/online-mca"
+      coursePagePath: "/universities/vgu-online/courses/online-mca"
     },
     {
       name: "Lovely Professional University",
@@ -357,7 +357,7 @@ const OnlineMCA = () => {
       emiOption: "₹6,667/month",
       registrationFee: "₹4,000",
       rating: 4.2,
-      coursePagePath: "/university/lpu/online-mca"
+      coursePagePath: "/universities/lpu-online/courses/online-mca"
     },
   ];
 

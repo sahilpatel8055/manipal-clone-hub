@@ -493,7 +493,7 @@ const OnlineBBA = () => {
             emiOption: "₹9,167/month",
             registrationFee: "₹5,000",
             rating: 4.6,
-            coursePagePath: "/university/manipal/courses/online-bba"
+            coursePagePath: "/universities/manipal-online/courses/online-bba"
           },
           {
             name: "Uttaranchal University",
@@ -503,7 +503,7 @@ const OnlineBBA = () => {
             emiOption: "₹5,833/month",
             registrationFee: "₹3,000",
             rating: 4.5,
-            coursePagePath: "/university/uttaranchal/online-bba"
+            coursePagePath: "/universities/uttaranchal-online/courses/online-bba"
           },
           {
             name: "Vivekananda Global University",
@@ -513,7 +513,7 @@ const OnlineBBA = () => {
             emiOption: "₹5,000/month",
             registrationFee: "₹2,500",
             rating: 4.4,
-            coursePagePath: "/university/vgu/online-bba"
+            coursePagePath: "/universities/vgu-online/courses/online-bba"
           },
           {
             name: "IGNOU",
@@ -533,7 +533,7 @@ const OnlineBBA = () => {
             emiOption: "₹6,667/month",
             registrationFee: "₹4,000",
             rating: 4.5,
-            coursePagePath: "/university/sikkim/online-bba"
+            coursePagePath: "/universities/sikkim-manipal-online/courses/online-bba"
           },
           {
             name: "Amity University Online",
@@ -543,7 +543,7 @@ const OnlineBBA = () => {
             emiOption: "₹8,333/month",
             registrationFee: "₹4,500",
             rating: 4.3,
-            coursePagePath: "/university/amity/online-bba"
+            coursePagePath: "/universities/amity-online/courses/online-bba"
           },
           {
             name: "Lovely Professional University",
@@ -553,7 +553,7 @@ const OnlineBBA = () => {
             emiOption: "₹7,500/month",
             registrationFee: "₹4,000",
             rating: 4.2,
-            coursePagePath: "/university/lpu/online-bba"
+            coursePagePath: "/universities/lpu-online/courses/online-bba"
           },
           {
             name: "Mangalyatan University",
@@ -563,7 +563,7 @@ const OnlineBBA = () => {
             emiOption: "₹5,833/month",
             registrationFee: "₹3,000",
             rating: 4.1,
-            coursePagePath: "/university/mangalyatan/online-bba"
+            coursePagePath: "/universities/mangalayatan-online/courses/online-bba"
           }
         ]}
       />

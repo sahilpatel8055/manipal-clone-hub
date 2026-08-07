@@ -50,15 +50,15 @@ const HorizontalUniversityScroll = ({ universities = [], courseType = "" }: Hori
   };
 
   const getUniversityLink = (universityName: string) => {
-    if (universityName.toLowerCase().includes('manipal')) return '/university/manipal';
-    if (universityName.toLowerCase().includes('uttaranchal')) return '/university/uttaranchal';
-    if (universityName.toLowerCase().includes('vivekananda')) return '/university/vgu';
-    if (universityName.toLowerCase().includes('sikkim')) return '/university/sikkim';
-    if (universityName.toLowerCase().includes('amity')) return '/university/amity';
-    if (universityName.toLowerCase().includes('lovely') || universityName.toLowerCase().includes('lpu')) return '/university/lpu';
-    if (universityName.toLowerCase().includes('mangalyatan')) return '/university/mangalyatan';
-    if (universityName.toLowerCase().includes('du sol') || universityName.toLowerCase().includes('school of open learning')) return '/university/du-sol';
-    return '/university/ignou';
+    if (universityName.toLowerCase().includes('manipal')) return '/universities/manipal-online';
+    if (universityName.toLowerCase().includes('uttaranchal')) return '/universities/uttaranchal-online';
+    if (universityName.toLowerCase().includes('vivekananda')) return '/universities/vgu-online';
+    if (universityName.toLowerCase().includes('sikkim')) return '/universities/sikkim-manipal-online';
+    if (universityName.toLowerCase().includes('amity')) return '/universities/amity-online';
+    if (universityName.toLowerCase().includes('lovely') || universityName.toLowerCase().includes('lpu')) return '/universities/lpu-online';
+    if (universityName.toLowerCase().includes('mangalyatan')) return '/universities/mangalayatan-online';
+    if (universityName.toLowerCase().includes('du sol') || universityName.toLowerCase().includes('school of open learning')) return '/universities/du-sol-online';
+    return '/universities/ignou-online';
   };
 
   // Handle empty universities array

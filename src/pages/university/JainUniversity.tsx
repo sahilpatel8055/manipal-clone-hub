@@ -86,7 +86,7 @@ const JainUniversity = () => {
         title="Jain University Online Degree Programs - UGC Approved Online Courses"
         description="Get your online degree from Jain University. Choose from MBA, BBA, MCA, BCA, M.Com, B.Com, and more. NAAC A++ accredited with industry-relevant curriculum."
         keywords="Jain University Online, Online MBA, Online BBA, Online Degree, Distance Learning, UGC Approved, NAAC A++"
-        canonical="https://avedu.in/university/jain"
+        canonical="https://avedu.in/universities/jain-online"
       />
       
       <NavigationHeader />
@@ -396,7 +396,7 @@ const JainUniversity = () => {
                           variant="outline"
                           className="flex-1 border-orange-600 text-orange-600 hover:bg-orange-50 font-semibold py-2 px-4 rounded-lg"
                         >
-                          <a href={`/university/jain/${course.name.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z-]/g, '')}`}>
+                          <a href={`/universities/jain-online/courses/${course.name.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z-]/g, '')}`}>
                             View Details
                           </a>
                         </Button>
@@ -444,7 +444,7 @@ const JainUniversity = () => {
                           variant="outline"
                           className="flex-1 border-orange-600 text-orange-600 hover:bg-orange-50 font-semibold py-2 px-4 rounded-lg"
                         >
-                          <a href={`/university/jain/${course.name.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z-]/g, '')}`}>
+                          <a href={`/universities/jain-online/courses/${course.name.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z-]/g, '')}`}>
                             View Details
                           </a>
                         </Button>

@@ -68,42 +68,42 @@ const Index = () => {
       name: "IGNOU",
       logo: ignouLogo,
       description: "Indira Gandhi National Open University",
-      route: "/university/ignou"
+      route: "/universities/ignou-online"
     },
     {
       id: "manipal",
       name: "Manipal University Online",
       logo: manipalLogo,
       description: "Premier Private University",
-      route: "/university/manipal"
+      route: "/universities/manipal-online"
     },
     {
       id: "amity",
       name: "Amity University Online",
       logo: amityLogo,
       description: "Leading Private University",
-      route: "/university/amity"
+      route: "/universities/amity-online"
     },
     {
       id: "lpu",
       name: "Lovely Professional University",
       logo: lpuLogo,
       description: "Top Ranked University",
-      route: "/university/lpu"
+      route: "/universities/lpu-online"
     },
     {
       id: "sikkim",
       name: "Sikkim Manipal University",
       logo: smuLogo,
       description: "Distance Learning Pioneer",
-      route: "/university/sikkim"
+      route: "/universities/sikkim-manipal-online"
     },
     {
       id: "uttaranchal",
       name: "Uttaranchal University",
       logo: uttaranchalLogo,
       description: "Innovation in Education",
-      route: "/university/uttaranchal"
+      route: "/universities/uttaranchal-online"
     }
   ];
 

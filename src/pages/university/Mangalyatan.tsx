@@ -227,7 +227,7 @@ const Mangalyatan = () => {
                     <Award className="w-4 h-4 text-primary" />
                     <span>{course.specializations} Specializations</span>
                   </div>
-                  <Link to={`/university/mangalyatan/${course.id}`}>
+                  <Link to={`/universities/mangalayatan-online/courses/${course.id}`}>
                     <Button className="w-full mt-4 bg-primary text-primary-foreground hover:bg-primary/90" variant="outline">
                       View Details
                     </Button>

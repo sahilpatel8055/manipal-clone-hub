@@ -315,7 +315,7 @@ const OnlineMCOM = () => {
       emiOption: "₹7,500/month",
       registrationFee: "₹5,000",
       rating: 4.6,
-      coursePagePath: "/university/manipal/online-mcom"
+      coursePagePath: "/universities/manipal-online/courses/online-mcom"
     },
     {
       name: "Uttaranchal University",
@@ -325,7 +325,7 @@ const OnlineMCOM = () => {
       emiOption: "₹5,000/month",
       registrationFee: "₹3,000",
       rating: 4.5,
-      coursePagePath: "/university/uttaranchal/online-mcom"
+      coursePagePath: "/universities/uttaranchal-online/courses/online-mcom"
     },
     {
       name: "Vivekananda Global University",
@@ -335,7 +335,7 @@ const OnlineMCOM = () => {
       emiOption: "₹4,166/month",
       registrationFee: "₹2,500",
       rating: 4.4,
-      coursePagePath: "/university/vgu/online-mcom"
+      coursePagePath: "/universities/vgu-online/courses/online-mcom"
     },
     {
       name: "Lovely Professional University",
@@ -345,7 +345,7 @@ const OnlineMCOM = () => {
       emiOption: "₹5,833/month",
       registrationFee: "₹4,000",
       rating: 4.2,
-      coursePagePath: "/university/lpu/online-mcom"
+      coursePagePath: "/universities/lpu-online/courses/online-mcom"
     },
   ];
 

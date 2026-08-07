@@ -90,7 +90,7 @@ const LPU = () => {
         title="LPU Distance Education | Online Degree Programs | UGC Approved Courses"
         description="Join LPU Distance Education with 100+ online programs. NAAC A++ rated, UGC-DEB approved. Flexible learning, industry partnerships & placement support."
         keywords="LPU distance education, LPU online courses, Lovely Professional University online, UGC approved distance learning"
-        canonical="https://avedu.in/university/lpu"
+        canonical="https://avedu.in/universities/lpu-online"
       />
       <NavigationHeader />
       <SeoBreadcrumbs />
@@ -247,7 +247,7 @@ const LPU = () => {
                     <Award className="w-4 h-4 text-primary" />
                     <span>{course.specializations} Specializations</span>
                   </div>
-                  <Link to={`/university/lpu/${course.id}`}>
+                  <Link to={`/universities/lpu-online/courses/${course.id}`}>
                     <Button className="w-full mt-4 bg-primary text-primary-foreground hover:bg-primary/90" variant="outline">
                       View Details
                     </Button>

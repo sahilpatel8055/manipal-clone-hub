@@ -90,7 +90,7 @@ const AmityCoursePage = () => {
         title={`${course.name} Online - Amity University | Fee ₹${course.feesBreakdown.fullFees} | Apply Now`}
         description={`Study ${course.name} online from Amity University. Total fee ${course.feesBreakdown.fullFees}, ${course.duration} duration. UGC approved with 100% placement assistance.`}
         keywords={`${course.name} online, Amity University ${course.name}, online ${course.name} fees, distance education, UGC approved`}
-        canonical={`https://avedu.in/university/amity/courses/${course.id}`}
+        canonical={`https://avedu.in/universities/amity-online/courses/${course.id}`}
       />
       <NavigationHeader />
       <SeoBreadcrumbs />

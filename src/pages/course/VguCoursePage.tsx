@@ -49,7 +49,7 @@ const VguCoursePage = () => {
       {/* Hero Section */}
       <section id="hero" className="bg-gradient-to-br from-primary/10 via-background to-primary/5 py-12">
         <div className="container mx-auto px-4">
-          <Link to="/university/vgu" className="flex items-center text-primary hover:underline mb-6">
+          <Link to="/universities/vgu-online" className="flex items-center text-primary hover:underline mb-6">
             <ChevronLeft className="w-4 h-4 mr-2" />
             Back to Vivekananda Global University
           </Link>

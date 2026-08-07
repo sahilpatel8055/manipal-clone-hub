@@ -315,7 +315,7 @@ export const ADMISSION_CALENDAR: AdmissionEvent[] = [
   {
     university: "Manipal University Jaipur (Online Manipal)",
     universityId: "manipal",
-    path: "/university/manipal",
+    path: "/universities/manipal-online",
     session: "July 2026",
     admissionOpen: "1 Apr 2026",
     admissionLastDate: "31 Jul 2026",
@@ -326,7 +326,7 @@ export const ADMISSION_CALENDAR: AdmissionEvent[] = [
   {
     university: "Amity University Online",
     universityId: "amity",
-    path: "/university/amity",
+    path: "/universities/amity-online",
     session: "July 2026",
     admissionOpen: "15 Mar 2026",
     admissionLastDate: "31 Aug 2026",
@@ -337,7 +337,7 @@ export const ADMISSION_CALENDAR: AdmissionEvent[] = [
   {
     university: "LPU Online",
     universityId: "lpu",
-    path: "/university/lpu",
+    path: "/universities/lpu-online",
     session: "August 2026",
     admissionOpen: "1 Apr 2026",
     admissionLastDate: "31 Aug 2026",
@@ -348,7 +348,7 @@ export const ADMISSION_CALENDAR: AdmissionEvent[] = [
   {
     university: "Jain University Online",
     universityId: "jain",
-    path: "/university/jain",
+    path: "/universities/jain-online",
     session: "July 2026",
     admissionOpen: "1 Apr 2026",
     admissionLastDate: "31 Jul 2026",
@@ -359,7 +359,7 @@ export const ADMISSION_CALENDAR: AdmissionEvent[] = [
   {
     university: "IGNOU",
     universityId: "ignou",
-    path: "/university/ignou",
+    path: "/universities/ignou-online",
     session: "July 2026",
     admissionOpen: "1 May 2026",
     admissionLastDate: "31 Jul 2026",
@@ -370,7 +370,7 @@ export const ADMISSION_CALENDAR: AdmissionEvent[] = [
   {
     university: "Sikkim Manipal University",
     universityId: "smu",
-    path: "/university/smu",
+    path: "/universities/sikkim-manipal-online",
     session: "July 2026",
     admissionOpen: "1 Apr 2026",
     admissionLastDate: "31 Jul 2026",
@@ -381,7 +381,7 @@ export const ADMISSION_CALENDAR: AdmissionEvent[] = [
   {
     university: "Uttaranchal University Online",
     universityId: "uttaranchal",
-    path: "/university/uttaranchal",
+    path: "/universities/uttaranchal-online",
     session: "July 2026",
     admissionOpen: "1 Apr 2026",
     admissionLastDate: "15 Aug 2026",
@@ -392,7 +392,7 @@ export const ADMISSION_CALENDAR: AdmissionEvent[] = [
   {
     university: "VGU Online",
     universityId: "vgu",
-    path: "/university/vgu",
+    path: "/universities/vgu-online",
     session: "July 2026",
     admissionOpen: "1 Apr 2026",
     admissionLastDate: "31 Aug 2026",
